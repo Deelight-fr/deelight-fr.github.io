@@ -9,10 +9,14 @@ layout: default
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div class="entry">
-        {{ post.excerpt }}
+<!--        {{ post.excerpt }}-->
+        {{ post.content }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Lire la suite</a>
+<!--      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Lire la suite</a>-->
+      <div class="date">       
+        Article publié le {{ post.date | date: "%d/%m/%Y" }}
+      </div>
     </article>
   {% endfor %}
 </div>
