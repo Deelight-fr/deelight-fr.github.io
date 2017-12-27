@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mémoriser les identifiants GIT
+title: Mémoriser des identifiants GIT
 tags: [GIT]
 ---
 
