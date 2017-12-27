@@ -45,6 +45,15 @@
       </div>
     </div>
 
+    <div id="sidebar">
+      <h1>Derniers articles</h1>
+      <ul>
+      {% for post in site.posts %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
@@ -53,6 +62,8 @@
       <div class="container">
         <footer class="footer">
           {% include svg-icons.html %}
+          <div class="donation">ETH : 0xaa2a26033F2805c53729904449d4C6Cf941D2e13<br/>
+          BTC : 1Cj9Ghq4TD4e6zXs9rTwgddroZfWsh6mvA</div>
         </footer>
       </div>
     </div>
