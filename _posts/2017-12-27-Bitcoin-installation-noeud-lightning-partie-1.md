@@ -5,7 +5,7 @@ tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 ---
 
 Cette procédure a été effectuée sur un Linux Ubuntu Server 16.04.3 LTS. 50 Go de disque ont été reservés pour pouvoir héberger un full node Bitcoin.  
-Il s'agit globalement d'un traduction très épurée de [cette documentation](http://dev.lightning.community/guides/installation).
+Il s'agit globalement d'une traduction très épurée de [cette documentation](http://dev.lightning.community/guides/installation).
 
 ## Prérequis
 
