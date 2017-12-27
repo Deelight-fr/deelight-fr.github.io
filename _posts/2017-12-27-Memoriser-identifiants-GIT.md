@@ -4,7 +4,7 @@ title: Mémoriser les identifiants GIT
 tags: [GIT]
 ---
 
-Mise en cache des identifiants de connexion a GitHub dans le cas d'une connexion via un couple identifiant / mot de passe (et non par clé SSH)
+Mise en cache des identifiants de connexion a GitHub (par exemple) dans le cas d'une connexion via un couple identifiant / mot de passe (et non par clé SSH)
 
 ```bash
 git config --global credential.helper cache
