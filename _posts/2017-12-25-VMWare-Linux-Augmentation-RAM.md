@@ -1,6 +1,7 @@
 ---
 layout: post
-title: VMWare & Linux / Augmentation de RAM à chaud
+title: VMware & Linux / Augmentation de RAM à chaud
+tags: [VMware, Linux]
 ---
 
 Après ajout de RAM, voici la procédure pour qu'elle soit reconnue sans redémarrer la VM.

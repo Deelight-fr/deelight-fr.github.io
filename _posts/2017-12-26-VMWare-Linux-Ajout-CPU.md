@@ -1,6 +1,7 @@
 ---
 layout: post
-title: VMWare & Linux / Ajout de processeurs à chaud
+title: VMware & Linux / Ajout de processeurs à chaud
+tags: [VMware, Linux]
 ---
 
 Après ajout d'un ou plusieurs CPU, voici la procédure pour qu'ils soient reconnus sans redémarrer la VM.
