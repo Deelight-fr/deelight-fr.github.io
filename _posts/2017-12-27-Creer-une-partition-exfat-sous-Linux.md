@@ -16,8 +16,8 @@ Créer la partition avec fdisk, et choisir le type de partition 11 (Microsoft ba
 fdisk /dev/sdN
 ```
 
-Formater la partition et lui attribuer une étiquette (label) :
+Formater la partition et lui attribuer une étiquette (label), ici "NomDuDisque" :
 
 ```bash
-mkfs.exfat -n VAULT /dev/sdNX
+mkfs.exfat -n NomDuDisque /dev/sdNX
 ```
