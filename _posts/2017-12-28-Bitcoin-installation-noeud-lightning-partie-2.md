@@ -13,7 +13,7 @@ Celà simplifiera le lancement le lnd :
 debuglevel=info
 debughtlc=true
 maxpendingchannels=10
-externalip=<votre_ip_externe> 
+externalip=<mon_ip_externe> 
   
 [Bitcoin]
 bitcoin.active=1
