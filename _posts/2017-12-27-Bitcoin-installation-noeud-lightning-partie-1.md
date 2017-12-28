@@ -54,7 +54,7 @@ go install . ./cmd/...
 ## Démarrage de btcd
 
 ```bash
-btcd --testnet --txindex --rpcuser=kek --rpcpass=kek
+btcd --testnet --txindex --rpcuser=mon_login --rpcpass=mon_password
 ```
 
 La synchronisation de la blockchain va débuter. Ce processus peut prendre plusieurs heures.
@@ -62,5 +62,5 @@ La synchronisation de la blockchain va débuter. Ce processus peut prendre plusi
 On peut obtenir le numéro du dernier block synchronisé via :
 
 ```bash
-btcctl --testnet --rpcuser=kek --rpcpass=kek getinfo | grep blocks
+btcctl --testnet --rpcuser=mon_login --rpcpass=mon_password getinfo | grep blocks
 ```
