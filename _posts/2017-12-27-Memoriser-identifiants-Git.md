@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mémoriser des identifiants GIT
-tags: [GIT]
+title: Mémoriser des identifiants Git
+tags: [Git]
 ---
 
 Mise en cache des identifiants de connexion a GitHub (par exemple) dans le cas d'une connexion via un couple identifiant / mot de passe (et non par clé SSH)
