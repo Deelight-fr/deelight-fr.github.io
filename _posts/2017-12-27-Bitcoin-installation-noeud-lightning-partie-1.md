@@ -4,7 +4,7 @@ title: Bitcoin / Installation d'un noeud Lightning sur testnet - Partie 1
 tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 ---
 
-Cette procédure a été effectuée sur un Linux Ubuntu Server 16.04.3 LTS. 50 Go de disque ont été reservés pour pouvoir héberger un full node Bitcoin.  
+Cette procédure a été effectuée sur un Linux Ubuntu Server 16.04.3 LTS. Prévoir assez d'espace disque pour héberger un full node Bitcoin testnet (le 27/12/2017, la blockchain prenait 15,3 Go).
 Il s'agit globalement d'une traduction très épurée de [cette documentation](http://dev.lightning.community/guides/installation).
 
 ## Prérequis
