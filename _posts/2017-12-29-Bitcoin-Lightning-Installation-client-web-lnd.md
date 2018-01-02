@@ -5,7 +5,7 @@ tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 ---
 
 
-Pocédure d'installation sous Ubuntu 16.04.3 LTS.
+Procédure d'installation sous Ubuntu 16.04.3 LTS.
 
 Le client lncli-web a été développé par [Francois Mably](https://github.com/mably)
 
