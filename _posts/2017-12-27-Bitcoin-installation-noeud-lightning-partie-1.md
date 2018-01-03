@@ -64,3 +64,5 @@ On peut obtenir le numéro du dernier block synchronisé via :
 ```bash
 btcctl --testnet --rpcuser=mon_login --rpcpass=mon_password getinfo | grep blocks
 ```
+
+La suite : [Bitcoin / Installation d'un noeud Lightning sur testnet - Partie 2](/Bitcoin-installation-noeud-lightning-partie-2/)
