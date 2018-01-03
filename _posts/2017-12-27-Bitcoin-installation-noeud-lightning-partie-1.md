@@ -9,9 +9,9 @@ Il s'agit globalement d'une traduction très épurée de [cette documentation](h
 
 ## Prérequis
 
-Installation de Go :
+Installation de Go et git :
 ```bash
-sudo apt-get install golang-1.9
+sudo apt-get install golang-1.9 git
 ```
 
 Mise à jour du PATH (potentiellement à rajouter dans ~/.bashrc):
