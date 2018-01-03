@@ -67,7 +67,6 @@ go install . ./cmd/...
 ```
 
 Ca va prendre un bon bout de temps...
-```
 
 ## Installation de btcd
 
