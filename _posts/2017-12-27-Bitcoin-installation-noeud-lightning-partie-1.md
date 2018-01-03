@@ -11,7 +11,7 @@ Il s'agit globalement d'une traduction très épurée de [cette documentation](h
 
 Installation de Go :
 ```bash
-apt-get install golang-1.9
+sudo apt-get install golang-1.9
 ```
 
 Mise à jour du PATH (potentiellement à rajouter dans ~/.bashrc):
