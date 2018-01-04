@@ -157,7 +157,7 @@ Via ce faucet par exemple : [https://testnet.manu.backend.hamburg/faucet](https:
 On peut trouver des adresses de noeuds sur [https://explorer.acinq.co](https://explorer.acinq.co)
 
 ```bash
-lncli connect 51.15.213.104:9735
+lncli connect 03f113414ebdc6c1fb0f33c99cd5a1d09dd79e7fdf2468cf1fe1af6674361695d2@51.15.213.104:9735
 ```
 
 ![BTCD + LND sur Pi1](/images/pi1-btcd-lnd.png "BTCD + LND sur Pi1")
