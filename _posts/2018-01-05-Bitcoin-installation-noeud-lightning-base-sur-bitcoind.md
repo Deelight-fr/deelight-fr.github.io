@@ -172,4 +172,12 @@ On peut trouver des adresses de noeuds sur [https://explorer.acinq.co](https://e
 lncli connect 03f113414ebdc6c1fb0f33c99cd5a1d09dd79e7fdf2468cf1fe1af6674361695d2@51.15.213.104:9735
 ```
 
-A partir d'ici, on peut créer des channels normalement, effectuer des paiement, etc.
+### Création d'un channel
+
+On alloue dans cet exemple 300000 satoshis au nouveau channel.
+
+```bash
+lncli openchannel 02464bfaaae78b98268a6a6d7e8f6a110c60dd1293811d6029b11ee9edb4bbf869 --local_amt 300000
+```
+
+A partir d'ici, on peut effectuer des paiements, se connecter à d'autres noeuds, ouvrir de nouveaux channels etc.
