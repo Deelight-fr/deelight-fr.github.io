@@ -181,3 +181,9 @@ lncli openchannel 02464bfaaae78b98268a6a6d7e8f6a110c60dd1293811d6029b11ee9edb4bb
 ```
 
 A partir d'ici, on peut effectuer des paiements, se connecter à d'autres noeuds, ouvrir de nouveaux channels etc.
+
+## Ressources
+
+- [Testing lnd with a bitcoind back-end](https://gist.github.com/aakselrod/5644b9319041a796ba6ffca28062376e)
+- [Lightning Network Developers: Installation](http://dev.lightning.community/guides/installation/)
+- [Lightning Network Developers: Stage 1 - Setting up a local cluster](http://dev.lightning.community/tutorial/01-lncli/index.html)
