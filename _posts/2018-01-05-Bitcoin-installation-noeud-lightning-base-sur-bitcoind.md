@@ -6,7 +6,7 @@ tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 
 Installation d'un noeud lightning bitcoind (au lieu de btcd) + lnd sous Ubuntu 16.04.3 server
 
-Pour n'oublier aucune étape, je suis parti d'une marchine virtuelle avec un installation vierge et à jour de la distribution. Rien d'autre n'a été installé hormis les groupes logiciels :
+Pour n'oublier aucune étape, je suis parti d'une machine virtuelle avec une installation vierge et à jour de la distribution. Rien d'autre n'a été installé hormis les groupes logiciels :
 
 - standard system utilities
 - OpenSSH server
