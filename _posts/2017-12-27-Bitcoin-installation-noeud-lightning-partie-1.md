@@ -15,9 +15,12 @@ sudo apt-get install golang-1.9 git
 ```
 
 Mise à jour du PATH (potentiellement à rajouter dans ~/.bashrc):
+
 ```bash
+echo 'export GOPATH=~/gocode' >> $HOME/.profile
 export GOPATH=~/gocode
-export PATH=$PATH:$GOPATH/bin:/usr/lib/go-1.9/bin/
+echo 'export PATH=$PATH:$GOPATH/bin:/usr/lib/go-1.9/bin' >> $HOME/.profile
+export PATH=$PATH:$GOPATH/bin:/usr/lib/go-1.9/bin
 ```
 
 Installation de Glide :
