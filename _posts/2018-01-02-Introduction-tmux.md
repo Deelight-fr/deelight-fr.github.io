@@ -41,9 +41,9 @@ unbind s
 bind s set -g synchronize-panes
 ```
 
-Ainsi, il me suffit de taper `CTRL-s` pour activer la saisie simultanée dans toutes les fenêtres affichées.
+Ainsi, il me suffit de taper `CTRL-b s` pour activer la saisie simultanée dans toutes les fenêtres affichées.
 
-On peut ensuite la désactiver en retapant `CTRL-s`
+On peut ensuite la désactiver en retapant `CTRL-b s`
 
 ## Démo en vidéo
 
