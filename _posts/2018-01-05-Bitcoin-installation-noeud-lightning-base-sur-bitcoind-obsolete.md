@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bitcoin / Installation d'un noeud Lightning testnet bitcoind/lnd
+title: Bitcoin / Installation d'un noeud Lightning testnet bitcoind/lnd (obsolète)
 tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 ---
 
