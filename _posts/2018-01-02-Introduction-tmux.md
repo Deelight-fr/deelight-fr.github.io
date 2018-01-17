@@ -29,6 +29,7 @@ en arrière-plan (à la manière de `screen`).
 | CTRL-b *espace*    | changer la disposition des fenêtres (essayer plusieurs fois de suite) |
 | CTRL-b *page-haut* | remonter dans l'historique de la fenêtre |
 | CTRL-b *page-bas*  | descendre dans l'historique de la fenêtre |
+| CTRL-b !           | déplacer le terminal actif dans un nouvel onglet |
 | *Echap*            | sortir du défilement de l'historique |
 {:.mbtablestyle}
 
