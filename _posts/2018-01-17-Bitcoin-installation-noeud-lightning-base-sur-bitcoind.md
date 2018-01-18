@@ -114,19 +114,9 @@ peerport=9735
 bitcoin.active=1
 bitcoin.node=bitcoind
 bitcoin.testnet=1
-
-[Bitcoind]
-bitcoind.rpcuser=mon_login
-bitcoind.rpcpass=mon_password
-bitcoind.zmqpath=tcp://127.0.0.1:18501
 ```
 
-J'ai remarqué que si la dernière ligne était absente (zmqpath), j'obtenais l'erreur :
-
-```
-2018-01-17 10:14:38.056 [INF] LNWL: Opened wallet
-panic: runtime error: index out of range
-```
+Pas besoin de préciser les paramètres de connexion à bitcoind, lnd va automatiquement les récupérer depuis `~/.bitcoin/bitcoin.conf`.
 
 On doit d’assurer que le port 9735 est bien accessible depuis internet (redirection de port à mettre en place si nécessaire).
 
