@@ -107,8 +107,9 @@ Création d’un fichier *~/.lnd/lnd.conf* :
 debuglevel=info
 debughtlc=true
 maxpendingchannels=10
-externalip=mon_ip_externe
-peerport=9735
+externalip=mon_ip_externe:9735
+listen=localhost:9735
+alias=mon node lightning
 
 [Bitcoin]
 bitcoin.active=1
