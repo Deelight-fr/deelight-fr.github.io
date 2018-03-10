@@ -101,7 +101,8 @@ Celà simplifiera le lancement le lnd :
 debuglevel=info
 debughtlc=true
 maxpendingchannels=10
-externalip=<mon_ip_externe> 
+externalip=<mon_ip_externe>
+peerport=9735
   
 [Bitcoin]
 bitcoin.active=1
