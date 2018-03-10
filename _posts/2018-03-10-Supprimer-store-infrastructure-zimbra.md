@@ -4,7 +4,7 @@ title: Zimbra / Supprimer un store d'une infrastructure Zimbra
 tags: [Zimbra, Linux]
 ---
 
-La méthode la plus souple pour mettre à jour une infra Zimbra consiste généralement à installer de nouveaux stores sous la nouvelle version, et à migrer progressivement les boîtes mail vers ces nouveau stores. Dans mon cas d'usage, cette méthode à permis de migrer un peu plus de 12000 comptes en période de production, sans qu'aucun utilisateur ne s'en rende compte.
+La méthode la plus souple pour mettre à jour une infra Zimbra consiste généralement à installer de nouveaux stores sous la nouvelle version, et à migrer progressivement les boîtes mail vers ces nouveau stores. Dans mon cas d'usage, cette méthode à permis de migrer un peu plus de 12000 comptes de stores en version 8.6.0 GA vers la version 8.7.11 GA, en période de production, sans qu'aucun utilisateur ne s'en rende compte.
 
 Comment procéder une fois que les stores d'origine sont vides ?
 
