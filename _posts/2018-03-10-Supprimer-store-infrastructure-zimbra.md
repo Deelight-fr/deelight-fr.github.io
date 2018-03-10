@@ -4,7 +4,7 @@ title: Zimbra / Supprimer un store d'une infrastructure Zimbra
 tags: [Zimbra, Linux]
 ---
 
-La méthode la plus souple pour mettre à jour une infra Zimbra consiste généralement à installer de nouveaux stores sous la nouvelle version, et à migrer progressivement les boîts mail vers ces nouveau stores. Dans mon cas d'usage, cette méthode à permis de migrer un peu plus de 12000 comptes en période de production, sans qu'aucun utilisateur ne s'en rende compte.
+La méthode la plus souple pour mettre à jour une infra Zimbra consiste généralement à installer de nouveaux stores sous la nouvelle version, et à migrer progressivement les boîtes mail vers ces nouveau stores. Dans mon cas d'usage, cette méthode à permis de migrer un peu plus de 12000 comptes en période de production, sans qu'aucun utilisateur ne s'en rende compte.
 
 Comment procéder une fois que les stores d'origine sont vides ?
 
@@ -47,6 +47,8 @@ On découvre normalement que les attributs concernés sont :
 - zimbraReverseProxyAvailableLookupTargets
 - zimbraReverseProxyUpstreamLoginServers
 
+Celà va evidemment varier selon l'infra.
+
 Notons que *zmprov gs* remonte les attributs serveurs et ceux hérité de la config globale, mais on va quand meme s'assurer de supprimer une éventuelle config locale de ces attributs, sur toutes les machines de l'infra :
 
 ```bash
@@ -81,7 +83,7 @@ Sur *zstoreX*, récupérer la liste des services activés :
 zmprov gs `zmhostname` zimbraServiceEnabled
 ```
 
-et les désactiver :
+et les désactiver (adapter cette liste au retour de la commande précédente) :
 
 ```bash
 zmprov ms `zmhostname` -zimbraServiceEnabled service
@@ -101,6 +103,8 @@ A lancer sur un serveur de l'infra :
 ```bash
 zmprov deleteServer zstoreX.domaine.tld
 ```
+
+La commande retournera une erreur si le store n'est pas totalement vide.
 
 Il devrait avoir disparu de tous les stores/serveurs quand on effectue un :
 
