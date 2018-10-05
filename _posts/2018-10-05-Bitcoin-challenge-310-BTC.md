@@ -16,11 +16,11 @@ Je ne me fais pas de faux espoirs, il y a des gens bien plus compétents que moi
 
 ### Le masque de transparence ###
 
-Le PNG d'origine présente des zone légèrement transparentes invisible à l'oreil nu (opacité de 253 sur 255). Voici comment les mettre en évidence avec Gimp :
+Le PNG d'origine présente des zones légèrement transparentes invisibles à l'oeil nu (opacité de 253 sur 255). Voici comment les mettre en évidence avec Gimp :
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/63ltk3OcTq8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-Le QRcode amène vers une [page du site](https://bitcoinchallenge.codes/register-310/) où l'on peut tenter de valider la hash sha256 d'un fichier (je n'y suis pas encore parvenu). La ligne correspond quant-à-elle à du binaire :
+Le QRcode amène vers une [page du site](https://bitcoinchallenge.codes/register-310/) où l'on peut tenter de valider la hash sha256 d'un fichier (je n'y suis pas encore parvenu). La ligne correspond quant à elle à du binaire :
 
 ```
 01010101001100100100011001110011011001000100011101010110011010110101100000110001
@@ -60,7 +60,7 @@ Le QRcode amène vers une [page du site](https://bitcoinchallenge.codes/register
 01001010011000100100000101010110011101110101100001010001001111010011110100001010
 ```
 
-Converti en ASCII, cela donne
+Converti en ASCII, cela donne :
 
 ```
 U2FsdGVkX19Q3I//VCH0U3cVtITZ3ckILJnUcdPX3Gs5qjdF1UjZ3mAftGivtFYD
@@ -71,11 +71,11 @@ M7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0os
 jH9DqbM6DUptu3HJbAVwXQ==
 ```
 
-C'est visiblement un fichier de 256 octets chiffré via OpenSSL. Reste à trouver l'algorithme de chiffrement et la clé.
+Si l'on fait un décodage base64, la chaine obtenue débute par "Salted__". C'est visiblement un fichier de 256 octets chiffré via OpenSSL. Reste à trouver l'algorithme de chiffrement et la clé.
 
 ### Le canal rouge ###
 
-Le canal rouge de l'image originale diffère des autres. En fisant une soustraction de couches sous Gimp, on met en evidence ces pixels :
+Le canal rouge de l'image originale diffère des autres. En faisant une difference de couches sous Gimp, on met en evidence ces pixels :
 
 ![Challenge](/images/challenge-redline.png "Challenge")
 
@@ -169,7 +169,7 @@ Je commence à penser qu'il est possible de tracer un chemin passant par toutes 
 
 ### La trame de fond ###
 
-Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre en évidence via une solarisation (appliquer un courbe de colorimétrique en triangle). Je n'ai rien pu extraire de cette trame pour le moment. De plus, elle est fortement influencée par l'image d'origine. Il est peut être nécessaire de reconstituer un tuile "propre" du motif en extrayant uniquement les pixels des zones sur fond blanc.
+Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre en évidence via une solarisation (appliquer un courbe de colorimétrique en triangle). Je n'ai rien pu extraire de cette trame pour le moment. De plus, elle est fortement influencée par l'image d'origine. Il est peut-être nécessaire de reconstituer un tuile "propre" du motif en extrayant uniquement les pixels des zones sur fond blanc.
 
 ![Challenge](/images/challenge-trame.png "Challenge")
 
