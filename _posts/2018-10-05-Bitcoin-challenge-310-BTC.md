@@ -18,7 +18,7 @@ Je ne me fais pas de faux espoirs, il y a des gens bien plus compétents que moi
 
 Le PNG d'origine présente des zone légèrement transparentes invisible à l'oreil nu (opacité de 253 sur 255). Voici comment les mettre en évidence avec Gimp :
 
-{% youtube oHg5SJYRHA0 %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/63ltk3OcTq8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Le canal rouge ###
 
