@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bitcoin Challenge : 310 BTC cachés dans une image
+title: Bitcoin Challenge / 310 BTC cachés dans une image
 tags: [Bitcoin]
 ---
 
