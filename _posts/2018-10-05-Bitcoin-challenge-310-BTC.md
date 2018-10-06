@@ -165,7 +165,9 @@ Pas mieux en inversé :
 
 ### Les courbes de Bézier ###
 
-Je commence à penser qu'il est possible de tracer un chemin passant par toutes les cellules contenant un caractère en utilisant les 4 courbes fournies (et des copies, éventuellement en miroir). Chaque cellule marquée semble en effet être très précisément à une courbe de distance d'une autre cellule (parfois plusieurs). L'extrémité en crochet d'une des courbes laisse penser que le chemin doit contourner certaines cellules. On peut par exemple imaginer que les courbes ne doivent pas se croiser, ou qu'il ne faut pas faire passer un chemin au dessus d'une cellule marquée. A tester.
+Je commence à penser qu'il est possible de tracer un chemin passant par toutes les cellules contenant un caractère en utilisant les 4 courbes fournies (et des copies, éventuellement en miroir). Chaque cellule marquée semble en effet être très précisément à une courbe de distance d'une autre cellule (parfois plusieurs). L'extrémité en crochet d'une des courbes laisse penser que le chemin doit contourner certaines cellules. On peut par exemple imaginer que les courbes ne doivent pas se croiser, ou qu'il ne faut pas faire passer un chemin au dessus d'une cellule marquée.
+
+On peut supposer que le point de départ est la lettre D entourée. En construisant un graph des lettres reliables, on peut faire tourner un algo de Dijkstra pour trouver les trajets possibles.
 
 ### La trame de fond ###
 
