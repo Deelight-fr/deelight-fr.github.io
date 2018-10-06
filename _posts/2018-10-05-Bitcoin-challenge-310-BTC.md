@@ -177,7 +177,7 @@ Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre e
 
 ### Extraction du LSB du canal rouge ###
 
-En extrayant l'inverse du dernier bit de la valeur de chaque pixel du canal rouge, on obtient le code binaire suivant :
+En extrayant l'inverse du dernier bit de la valeur de chaque pixel de la ligne 310 du canal rouge, on obtient le code binaire suivant :
 
 ```
 01001010101110010100111001111011011110110000110011100101001100000101100000110010
