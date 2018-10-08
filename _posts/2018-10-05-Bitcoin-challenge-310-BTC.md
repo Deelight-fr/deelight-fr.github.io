@@ -241,7 +241,7 @@ Qui convertie en ASCII donne :
 Ur2y+2iZ2LEaxNM7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0osjH9DqbM6DUptu3HJbAVwXQ==
 ```
 
-Qui correspond la fin de notre fichier chiffré.
+Qui correspond la fin du fichier chiffré obtenu dans la ligne 310 du canal alpha..
 
 Si on effectue une opération XOR entre le binaire inversé du canal alpha et le binaire inversé du dernier bit du canal rouge, on obtient :
 
@@ -301,6 +301,8 @@ THiWMkRq45FsPXHs3TjYqcJz7QzQ8HeM340EwWQWXAi0fVy+r6NPmiJRgMgMqLCu
 4Q9o/WkNyHxvPScNgG9jf8gskggx10FiTcoyF1KE+nxjmRkEuj7uQQsPrrlRP3sj
 ll4KXhAzrGQZi5E4sajQOBGQfaJjei5fHXXO6sxeYsFcuxzo3JdMOF3JFYQtuUDY
 ```
+
+On reconnait la encore la chaine `U2Fs...` caractéristique d'un fichier chiffre via OpenSSL.
 
 ## Ressources
 
