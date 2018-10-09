@@ -169,6 +169,10 @@ Je commence à penser qu'il est possible de tracer un chemin passant par toutes 
 
 On peut supposer que le point de départ est la lettre D entourée. En construisant un graph des lettres reliables, on peut faire tourner un algo de Dijkstra pour trouver les trajets possibles.
 
+Découverte intéressante : appliquer un effet miroir horizontal à l'ensemble des courbes permet de relier plusieurs cellules marquées.
+
+![Challenge](/images/challenge-courbes.png "Challenge")
+
 ### La trame de fond ###
 
 Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre en évidence via une solarisation (appliquer un courbe de colorimétrique en triangle). Je n'ai rien pu extraire de cette trame pour le moment. De plus, elle est fortement influencée par l'image d'origine. Il est peut-être nécessaire de reconstituer un tuile "propre" du motif en extrayant uniquement les pixels des zones sur fond blanc.
@@ -303,6 +307,11 @@ ll4KXhAzrGQZi5E4sajQOBGQfaJjei5fHXXO6sxeYsFcuxzo3JdMOF3JFYQtuUDY
 ```
 
 On reconnait la encore la chaine `U2Fs...` caractéristique d'un fichier chiffre via OpenSSL.
+
+### Le tableau de 18 valeurs ###
+
+Cette énigme a été résolue. Elle donnait accès à un récompense de 0.1 BTC.
+Le détail de la résolution prochainement (hint: appliquer un opération avec la date de publication du challenge aux cellules du tableau).
 
 ## Ressources
 
