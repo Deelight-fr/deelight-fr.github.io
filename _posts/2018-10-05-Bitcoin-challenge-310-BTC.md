@@ -10,7 +10,7 @@ Je ne me fais pas de faux espoirs, il y a des gens bien plus compétents que moi
 
 ## L'image source
 
-![Challenge](/images/challenge.png "Challenge")
+![Challenge](/images/310-bitcoin-challenge.png "Challenge")
 
 ## Les pistes ##
 
@@ -47,13 +47,13 @@ On peut supposer que le point de départ est la lettre D entourée. En construis
 
 Découverte intéressante : appliquer un effet miroir horizontal à l'ensemble des courbes permet de relier plusieurs cellules marquées.
 
-![Challenge](/images/challenge-courbes.png "Challenge")
+![Challenge](/images/310-bitcoin-challenge-curves.png "Challenge")
 
 ### La trame de fond ###
 
 Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre en évidence via une solarisation (appliquer un courbe de colorimétrique en triangle). Je n'ai rien pu extraire de cette trame pour le moment. De plus, elle est fortement influencée par l'image d'origine. Il est peut-être nécessaire de reconstituer un tuile "propre" du motif en extrayant uniquement les pixels des zones sur fond blanc.
 
-![Challenge](/images/challenge-trame.png "Challenge")
+![Challenge](/images/310-bitcoin-challenge-pattern.png "Challenge")
 
 ### Extraction du LSB du canal rouge ###
 
@@ -108,13 +108,13 @@ Cette énigme a été résolue dès le deuxième jour du challenge. Elle permet 
 
 La première étape consiste à repérer une date cachée dans l'image.
 
-![Challenge](/images/challenge-date.png "Challenge")
+![Challenge](/images/310-bitcoin-challenge-date.png "Challenge")
 
 "OCT 2 2018" nous donne en format propre (= pas américain) : "20181002".
 
 Nous prenons ensuite les caractères de cette chaîne 3 par 3 (en repétant la chaîne au besoin) et les soustrayons aux cellules du table initial. On constate que la première ligne nous donne unne série de "310" qui nous suggère que nous sommes sur la bonne piste. Toutes les autres valeurs du tableau donnent des chiffres (une fois la conversion hexadécimal vers décimal effectuée) inférieurs à 2048. Ces valeur correspondent à un codage possible en BIP-0039 (12 mots parmi 2048 possibilités).
 
-![Challenge](/images/challenge-decodage-tableau.png "Challenge")
+![Challenge](/images/310-bitcoin-challenge-table-decoding.png "Challenge")
 
 On obtient en effet 12 mots qui correspondent à la clé privée du wallet.
 
