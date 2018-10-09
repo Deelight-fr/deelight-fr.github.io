@@ -310,8 +310,19 @@ On reconnait la encore la chaine `U2Fs...` caractéristique d'un fichier chiffre
 
 ### Le tableau de 18 valeurs ###
 
-Cette énigme a été résolue. Elle donnait accès à un récompense de 0.1 BTC.
-Le détail de la résolution prochainement (hint: appliquer un opération avec la date de publication du challenge aux cellules du tableau).
+Cette énigme a été résolue dès le deuxième jour du challenge. Elle permet d'obtenir la clé privée d'un [wallet qui contenait initialement 0.1 BTC](https://blockexplorer.com/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
+
+La première étape consiste à repérer une date cachée ddans l'image.
+
+![Challenge](/images/challenge-date.png "Challenge")
+
+"OCT 2 2018" nous donne en format propre (= pas américain) : "20181002".
+
+Nous prenons ensuite les caractères de cette chaîne 3 par 3 (en repétant la chaîne au besoin) et les soustrayons aux cellules du table initial. On constate que la première ligne nous donne unne série de "310" qui nous nuggère que nous sommes sur la bonne piste. Toutes les autres valeur du tableau donnent des chiffres (une fois la conversion hexadécimal vers décimal effectuée) inférieurs à 2048. Ces valeur correspondent à un codage possible en BIP-0039 (12 mots choisis parmi 2048 possibilités).
+
+![Challenge](/images/challenge-decodage-tableau.png "Challenge")
+
+On obtient en effet 12 mots qui correspondent à la clé privée du wallet.
 
 ## Ressources
 
