@@ -61,7 +61,7 @@ Cette trame est constituée de tuiles de 128x120 pixels. Afin de l'isoler, j'ai 
 
 Ensuite, j'ai constitué une image à partir de ce motif (dans Gimp, filtre "Tile") légèrement supérieure à la taille de l'image de départ. Je l'ai ensuite placée en couche en mode extraction de grain et l'ai calée au pixel près sur l'image de départ. Une normalisation plus tard, on obtient une image débarassée du motif :
 
-![Challenge](/images/310-bitcoin-challenge-pattern-removed "Challenge")
+![Challenge](/images/310-bitcoin-challenge-pattern-removed.png "Challenge")
 
 En mode fusion de grain, on peut aussi récupérer la texture exacte ayant été appliquée sur l'image d'origine.
 
@@ -69,7 +69,7 @@ En mode fusion de grain, on peut aussi récupérer la texture exacte ayant été
 
 Appliquée à une image random, cela donne.
 
-![Challenge](/images/3310-bitcoin-challenge-real-pattern-sample.png "Challenge")
+![Challenge](/images/310-bitcoin-challenge-real-pattern-sample.png "Challenge")
 
 Celà n'a abouti à rien concernant le challenge, mais c'est un skill toujours bon à prendre.
 
