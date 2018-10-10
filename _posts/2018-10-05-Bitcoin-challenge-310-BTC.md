@@ -179,6 +179,13 @@ Now find something really interesting here:
 ---
 ```
 
+La concaténation de toutes ces données nous permet d'obtenir un hash sha256 qui est accepté sur la page d'enregistrement sur laquelle pointait le QRcode :
+
+```
+$ (echo "cry buyer grain save vault sign lyrics rhythm music fury horror mansion"; cat decrypted-files/alpha.dec decrypted-files/red-lsb.dec) | tr -d '\n' | sha256sum
+273e2b95648fd3cbad0d7fe3ed820e783c0b12fdbe29b57bfb2d1f243d92b1a5  -
+```
+
 ## Ressources
 
 - Site du challenge : [https://bitcoinchallenge.codes](https://bitcoinchallenge.codes)
