@@ -55,6 +55,24 @@ Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre e
 
 ![Challenge](/images/310-bitcoin-challenge-pattern.png "Challenge")
 
+Cette trame est constituée de tuiles de 128x120 pixels. Afin de l'isoler, j'ai extrait des zones sur fond blanc de l'image pour la reconstituer (principalement en haut à droite du tableau).
+
+![Challenge](/images/310-bitcoin-challenge-white-pattern.png "Challenge")
+
+Ensuite, j'ai constitué une image à partir de ce motif (dans Gimp, filtre "Tile") légèrement supérieure à la taille de l'image de départ. J'ai ensuite placé une couche en mode extraction de grain et l'ai calé au pixel près sur l'image de départ. Une normalisation plus tard, on obtient une image débarassée du motif :
+
+![Challenge](/images/310-bitcoin-challenge-pattern-removed "Challenge")
+
+En mode fusion de grain, on peut aussi récupérer la texture exacte ayant été appliquée sur l'image d'origine.
+
+![Challenge](/images/310-bitcoin-challenge-real-pattern.png "Challenge")
+
+Appliquée à une image random, cela donne.
+
+![Challenge](/images/3310-bitcoin-challenge-real-pattern-sample.png "Challenge")
+
+Celà n'a abouti à rien concernant le challenge, mais c'est un skill toujours bon à prendre.
+
 ### Extraction du LSB du canal rouge ###
 
 En extrayant l'inverse du dernier bit de la valeur de chaque pixel de la ligne 310 du canal rouge, on obtient le code binaire suivant :
