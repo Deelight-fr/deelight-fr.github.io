@@ -130,7 +130,7 @@ La première étape consiste à repérer une date cachée dans l'image.
 
 "OCT 2 2018" nous donne en format propre (= pas américain) : "20181002".
 
-Nous prenons ensuite les caractères de cette chaîne 3 par 3 (en repétant la chaîne au besoin) et les soustrayons aux cellules du table initial. On constate que la première ligne nous donne unne série de "310" qui nous suggère que nous sommes sur la bonne piste. Toutes les autres valeurs du tableau donnent des chiffres (une fois la conversion hexadécimal vers décimal effectuée) inférieurs à 2048. Ces valeur correspondent à un codage possible en BIP-0039 (12 mots parmi 2048 possibilités).
+Nous prenons ensuite les caractères de cette chaîne 3 par 3 (en repétant la chaîne au besoin) et les soustrayons aux cellules du table initial. On constate que la première ligne nous donne une série de "310" qui nous suggère que nous sommes sur la bonne piste. Toutes les autres valeurs du tableau donnent des chiffres (une fois la conversion hexadécimal vers décimal effectuée) inférieurs à 2048. Ces valeur correspondent à un codage possible en BIP-0039 (12 mots parmi 2048 possibilités).
 
 ![Challenge](/images/310-bitcoin-challenge-table-decoding.png "Challenge")
 
