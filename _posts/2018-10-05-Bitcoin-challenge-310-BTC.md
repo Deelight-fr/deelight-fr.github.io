@@ -131,10 +131,12 @@ Nous prenons ensuite les caractères de cette chaîne 3 par 3 (en repétant la c
 On obtient en effet 12 mots qui correspondent à la clé privée d'un wallet contenant 0.1 BTC.
 
 ```
-cry buyer grain save vault sign lyrics rhythm music fury horror mansion
-adresse : 1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV
-clé privée : KzkZxdhRGxB7eX4u1skXkfJ7VB8JfPp7Nfos3jiF7PQUNMh2SHDE
+cry buyer grain save vault sign
+lyrics rhythm music fury horror mansion
 ```
+
+- Adresse : 1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV
+- Clé privée : KzkZxdhRGxB7eX4u1skXkfJ7VB8JfPp7Nfos3jiF7PQUNMh2SHDE
 
 ### Les courbes de Bézier ###
 
@@ -201,7 +203,10 @@ En utilisant la même méthode que pour le premier tableau, nous obtenons la lis
 En combinant les 12 premiers mots obtenu et ces 12 nouveaux, nous obtenons les 24 mots suivants :
 
 ```
-cry buyer grain save vault sign lyrics rhythm music fury horror mansion debris slim immune lock actual tide gas vapor fringe pole flat glance
+cry buyer grain save vault sign
+lyrics rhythm music fury horror mansion
+debris slim immune lock actual tide
+gas vapor fringe pole flat glance
 ```
 
 Il s'agit d'un liste BIP39 valide permettant de déverrouiller un [wallet contenant 0.2 BTC](https://blockexplorer.com/address/1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR) :
