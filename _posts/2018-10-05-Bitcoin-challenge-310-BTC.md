@@ -124,7 +124,19 @@ La première étape consiste à repérer une date cachée dans l'image.
 
 "OCT 2 2018" nous donne en format propre (= pas américain) : "20181002".
 
-Nous prenons ensuite les caractères de cette chaîne 3 par 3 (en repétant la chaîne au besoin) et les soustrayons aux cellules du table initial. On constate que la première ligne nous donne une série de "310" qui nous suggère que nous sommes sur la bonne piste. Toutes les autres valeurs du tableau donnent des chiffres (une fois la conversion hexadécimal vers décimal effectuée) inférieurs à 2048. Ces valeur correspondent à un codage possible en BIP-0039 (12 mots parmi 2048 possibilités).
+Nous prenons ensuite les caractères de cette chaîne 1 par 1 (en repétant la chaîne au besoin) et les soustrayons aux caractères du tableau initial (en hexadécimal). En cas de valeur négative, on repart de la valeur maximum (F en hexadécimal) et on soustrait le reste.
+
+La formule pour une cellule de tableur (attention les yeux) :
+
+```
+=dec2hex(mod(hex2dec(mid(CELLULE_DE_A;1;1))-hex2dec(mid(CELLULE_CORRESPONDANTE_DE_B;1;1));16)) &
+dec2hex(mod(hex2dec(mid(CELLULE_DE_A;2;1))-hex2dec(mid(CELLULE_CORRESPONDANTE_DE_B;2;1));16)) &
+dec2hex(mod(hex2dec(mid(CELLULE_DE_A;3;1))-hex2dec(mid(CELLULE_CORRESPONDANTE_DE_B;3;1));16))
+```
+
+Cette formule est utilisé dans chaque cellule du troisième tableau.
+
+On constate que la première ligne nous donne une série de "310" qui nous suggère que nous sommes sur la bonne piste. Toutes les autres valeurs du tableau donnent des chiffres (une fois la conversion hexadécimal vers décimal effectuée) inférieurs à 2048. Ces valeur correspondent à un codage possible en BIP-0039 (12 mots parmi 2048 possibilités).
 
 ![Challenge](/images/310-bitcoin-challenge-table-decoding.png "Challenge")
 
