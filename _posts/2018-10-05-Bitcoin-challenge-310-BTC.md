@@ -204,10 +204,10 @@ En combinant les 12 premiers mots obtenu et ces 12 nouveaux, nous obtenons les 2
 cry buyer grain save vault sign lyrics rhythm music fury horror mansion debris slim immune lock actual tide gas vapor fringe pole flat glance
 ```
 
-Il s'agit d'un liste BIP39 valide permettant de déverrouiller un wallet contenant 0.2 BTC :
+Il s'agit d'un liste BIP39 valide permettant de déverrouiller un [wallet contenant 0.2 BTC](https://blockexplorer.com/address/1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR) :
 
-Adresse : 1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR
-Clé privée : KxPEUpQ5BE75UGRUVjNmf8dQuWsmP9jqL3FUUjavdRW69MEcmg6C
+- Adresse : 1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR
+- Clé privée : KxPEUpQ5BE75UGRUVjNmf8dQuWsmP9jqL3FUUjavdRW69MEcmg6C
 
 ## Ressources
 
