@@ -136,9 +136,9 @@ On constate ainsi que la première ligne nous donne une série de "310" qui nous
 La formule utilisée dans chaque cellule du tableau C (attention les yeux) :
 
 ```
-=dec2hex(mod(hex2dec(mid(CELLULE_DE_A;1;1))-hex2dec(mid(CELLULE_CORRESPONDANTE_DE_B;1;1));16)) &
-dec2hex(mod(hex2dec(mid(CELLULE_DE_A;2;1))-hex2dec(mid(CELLULE_CORRESPONDANTE_DE_B;2;1));16)) &
-dec2hex(mod(hex2dec(mid(CELLULE_DE_A;3;1))-hex2dec(mid(CELLULE_CORRESPONDANTE_DE_B;3;1));16))
+=dec2hex(mod(hex2dec(mid(CELLULE_DE_A;1;1))-mid(CELLULE_CORRESPONDANTE_DE_B;1;1);16)) &
+dec2hex(mod(hex2dec(mid(CELLULE_DE_A;2;1))-mid(CELLULE_CORRESPONDANTE_DE_B;2;1);16)) &
+dec2hex(mod(hex2dec(mid(CELLULE_DE_A;3;1))-mid(CELLULE_CORRESPONDANTE_DE_B;3;1);16))
 ```
 
 On obtient donc 12 mots qui correspondent à la clé privée d'un [wallet contenant 0.1 BTC](https://blockexplorer.com/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
