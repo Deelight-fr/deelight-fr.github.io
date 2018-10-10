@@ -186,6 +186,23 @@ $ (echo "cry buyer grain save vault sign lyrics rhythm music fury horror mansion
 273e2b95648fd3cbad0d7fe3ed820e783c0b12fdbe29b57bfb2d1f243d92b1a5  -
 ```
 
+## Dechiffrement du second tableau ##
+
+En utilisant la même méthode que pour le premier tableau, nous obtenons la liste de mots :
+
+![Challenge](/images/310-bitcoin-challenge-table2-decoding.png "Challenge")
+
+En combinant les 12 premiers mots obtenu et ces 12 nouveaux, nous obtenons les 24 mots suivants :
+
+```
+cry buyer grain save vault sign lyrics rhythm music fury horror mansion debris slim immune lock actual tide gas vapor fringe pole flat glance
+```
+
+Il s'agit d'un liste BIP39 valide permettant de déverrouiller un wallet contenant 0.2 BTC :
+
+Adresse : 1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR
+Clé privée : KxPEUpQ5BE75UGRUVjNmf8dQuWsmP9jqL3FUUjavdRW69MEcmg6C
+
 ## Ressources
 
 - Site du challenge : [https://bitcoinchallenge.codes](https://bitcoinchallenge.codes)
