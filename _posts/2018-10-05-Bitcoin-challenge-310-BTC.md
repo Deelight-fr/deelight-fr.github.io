@@ -128,7 +128,13 @@ Nous prenons ensuite les caractères de cette chaîne 3 par 3 (en repétant la c
 
 ![Challenge](/images/310-bitcoin-challenge-table-decoding.png "Challenge")
 
-On obtient en effet 12 mots qui correspondent à la clé privée du wallet.
+On obtient en effet 12 mots qui correspondent à la clé privée d'un wallet contenant 0.1 BTC.
+
+```
+cry buyer grain save vault sign lyrics rhythm music fury horror mansion
+adresse : 1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV
+clé privée : KzkZxdhRGxB7eX4u1skXkfJ7VB8JfPp7Nfos3jiF7PQUNMh2SHDE
+```
 
 ### Les courbes de Bézier ###
 
