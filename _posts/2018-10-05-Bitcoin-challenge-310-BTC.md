@@ -39,15 +39,7 @@ jH9DqbM6DUptu3HJbAVwXQ==
 
 Si l'on fait un décodage base64, la chaine obtenue débute par "Salted". C'est visiblement un fichier de 256 octets chiffré via OpenSSL. Reste à trouver l'algorithme de chiffrement et la clé.
 
-### Les courbes de Bézier ###
-
-Je commence à penser qu'il est possible de tracer un chemin passant par toutes les cellules contenant un caractère en utilisant les 4 courbes fournies (et des copies, éventuellement en miroir). Chaque cellule marquée semble en effet être très précisément à une courbe de distance d'une autre cellule (parfois plusieurs). L'extrémité en crochet d'une des courbes laisse penser que le chemin doit contourner certaines cellules. On peut par exemple imaginer que les courbes ne doivent pas se croiser, ou qu'il ne faut pas faire passer un chemin au dessus d'une cellule marquée.
-
-On peut supposer que le point de départ est la lettre D entourée. En construisant un graph des lettres reliables, on peut faire tourner un algo de Dijkstra pour trouver les trajets possibles.
-
-Découverte intéressante : appliquer un effet miroir horizontal à l'ensemble des courbes permet de relier plusieurs cellules marquées.
-
-![Challenge](/images/310-bitcoin-challenge-curves.png "Challenge")
+On appellera ce fichier **alpha.enc**.
 
 ### La trame de fond ###
 
@@ -120,6 +112,8 @@ ll4KXhAzrGQZi5E4sajQOBGQfaJjei5fHXXO6sxeYsFcuxzo3JdMOF3JFYQtuUDY
 
 On reconnait la encore la chaine `U2Fs...` caractéristique d'un fichier chiffre via OpenSSL.
 
+On appellera ce fichier **red-lsb.enc**.
+
 ### Le tableau de 18 valeurs ###
 
 Cette énigme a été résolue dès le deuxième jour du challenge. Elle permet d'obtenir la clé privée d'un [wallet qui contenait initialement 0.1 BTC](https://blockexplorer.com/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
@@ -135,6 +129,55 @@ Nous prenons ensuite les caractères de cette chaîne 3 par 3 (en repétant la c
 ![Challenge](/images/310-bitcoin-challenge-table-decoding.png "Challenge")
 
 On obtient en effet 12 mots qui correspondent à la clé privée du wallet.
+
+### Les courbes de Bézier ###
+
+Appliquer un effet miroir horizontal à l'ensemble des courbes permet de relier plusieurs cellules marquées.
+
+![Challenge](/images/310-bitcoin-challenge-curves.png "Challenge")
+
+On se retrouve avec 5 groupes de caractères :
+- L3 (ou 3L)
+- 02 (ou 20)
+- 584 (ou 485)
+- 9F (ou F9)
+- 7
+
+A partir de la, j'ai été un peu bourrin et généré la liste complete des permutations possibles. On finit par dechiffrer les deux fichiers :
+
+```bash
+$ openssl enc -aes-256-cbc -md md5 -base64 -d -a -k "02L3F95847" -in red-lsb.enc
+Bitcoin Challenge ..... 310 BTC
+https://bitcoinchallenge.codes/
+
+---
+
+You're either very very close, or working in the wrong direction :)
+
+Here you go : Z465/
+
+---
+```
+
+```bash
+$ openssl enc -aes-256-cbc -md md5 -base64 -d -a -k "L379F48502" -in alpha.enc
+Bitcoin Challenge ..... 310 BTC
+https://bitcoinchallenge.codes/
+
+---
+
+Well done!
+Now find something really interesting here:
+
+
+511 B20 332 328 410 530
+245 651 58F C2C 03A 717
+401 9AC 36A 53F 4C6 B26
+332 328 410 530 491 312
+
+
+---
+```
 
 ## Ressources
 
