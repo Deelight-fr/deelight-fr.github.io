@@ -37,7 +37,7 @@ M7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0os
 jH9DqbM6DUptu3HJbAVwXQ==
 ```
 
-Si l'on fait un décodage base64, la chaine obtenue débute par "Salted__". C'est visiblement un fichier de 256 octets chiffré via OpenSSL. Reste à trouver l'algorithme de chiffrement et la clé.
+Si l'on fait un décodage base64, la chaine obtenue débute par "Salted". C'est visiblement un fichier de 256 octets chiffré via OpenSSL. Reste à trouver l'algorithme de chiffrement et la clé.
 
 ### Les courbes de Bézier ###
 
@@ -51,15 +51,15 @@ Découverte intéressante : appliquer un effet miroir horizontal à l'ensemble d
 
 ### La trame de fond ###
 
-Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre en évidence via une solarisation (appliquer un courbe de colorimétrique en triangle). Je n'ai rien pu extraire de cette trame pour le moment. De plus, elle est fortement influencée par l'image d'origine. Il est peut-être nécessaire de reconstituer un tuile "propre" du motif en extrayant uniquement les pixels des zones sur fond blanc.
+Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre en évidence via une solarisation (appliquer un courbe de colorimétrique en triangle).
 
 ![Challenge](/images/310-bitcoin-challenge-pattern.png "Challenge")
 
-Cette trame est constituée de tuiles de 128x120 pixels. Afin de l'isoler, j'ai extrait des zones sur fond blanc de l'image pour la reconstituer (principalement en haut à droite du tableau).
+Cette trame est constituée de tuiles de 128x120 pixels. Afin de l'isoler, j'ai extrait des zones sur fond blanc de l'image (principalement en haut à droite du tableau). A coups de copiers-collers et de déplacements au pixel, on obtient :
 
 ![Challenge](/images/310-bitcoin-challenge-white-pattern.png "Challenge")
 
-Ensuite, j'ai constitué une image à partir de ce motif (dans Gimp, filtre "Tile") légèrement supérieure à la taille de l'image de départ. J'ai ensuite placé une couche en mode extraction de grain et l'ai calé au pixel près sur l'image de départ. Une normalisation plus tard, on obtient une image débarassée du motif :
+Ensuite, j'ai constitué une image à partir de ce motif (dans Gimp, filtre "Tile") légèrement supérieure à la taille de l'image de départ. Je l'ai ensuite placée en couche en mode extraction de grain et l'ai calée au pixel près sur l'image de départ. Une normalisation plus tard, on obtient une image débarassée du motif :
 
 ![Challenge](/images/310-bitcoin-challenge-pattern-removed "Challenge")
 
