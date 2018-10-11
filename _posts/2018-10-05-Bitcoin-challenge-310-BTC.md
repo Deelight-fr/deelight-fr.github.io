@@ -149,6 +149,7 @@ lyrics rhythm music fury horror mansion
 ```
 
 - Adresse : 1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV
+- Clé publique : 0376a376c4c2fc0ffad1a5d87f2100343d2cd29a5f7859458e545857727133e349
 - Clé privée : KzkZxdhRGxB7eX4u1skXkfJ7VB8JfPp7Nfos3jiF7PQUNMh2SHDE
 
 ### Les courbes de Bézier ###
@@ -225,6 +226,7 @@ gas vapor fringe pole flat glance
 Il s'agit d'un liste BIP39 valide permettant de déverrouiller un [wallet contenant 0.2 BTC](https://www.blockchain.com/btc/address/1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR) :
 
 - Adresse : 1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR
+- Clé publique : 02707e976e321e77c6b301b14f1c64d00b2b67b11963ab739aadccba6ddca05862
 - Clé privée : KxPEUpQ5BE75UGRUVjNmf8dQuWsmP9jqL3FUUjavdRW69MEcmg6C
 
 ## Ressources
