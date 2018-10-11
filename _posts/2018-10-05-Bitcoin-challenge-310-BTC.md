@@ -12,7 +12,7 @@ Je ne me fais pas de faux espoirs, il y a des gens bien plus compétents que moi
 
 ![Challenge](/images/310-bitcoin-challenge.png "Challenge")
 
-## Les pistes ##
+## Les découvertes ##
 
 ### Le masque de transparence ###
 
@@ -40,30 +40,6 @@ jH9DqbM6DUptu3HJbAVwXQ==
 Si l'on fait un décodage base64, la chaine obtenue débute par "Salted". C'est visiblement un fichier de 256 octets chiffré via OpenSSL. Reste à trouver l'algorithme de chiffrement et la clé.
 
 On appellera ce fichier **alpha.enc**.
-
-### La trame de fond ###
-
-Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre en évidence via une solarisation (appliquer un courbe de colorimétrique en triangle).
-
-![Challenge](/images/310-bitcoin-challenge-pattern.png "Challenge")
-
-Cette trame est constituée de tuiles de 128x120 pixels. Afin de l'isoler, j'ai extrait des zones sur fond blanc de l'image (principalement en haut à droite du tableau). A coups de copiers-collers et de déplacements au pixel, on obtient :
-
-![Challenge](/images/310-bitcoin-challenge-white-pattern.png "Challenge")
-
-Ensuite, j'ai constitué une image à partir de ce motif (dans Gimp, filtre "Tile") légèrement supérieure à la taille de l'image de départ. Je l'ai ensuite placée en couche en mode extraction de grain et l'ai calée au pixel près sur l'image de départ. Une normalisation plus tard, on obtient une image débarassée du motif :
-
-![Challenge](/images/310-bitcoin-challenge-pattern-removed.png "Challenge")
-
-En mode fusion de grain, on peut aussi récupérer la texture exacte ayant été appliquée sur l'image d'origine.
-
-![Challenge](/images/310-bitcoin-challenge-real-pattern.png "Challenge")
-
-Appliquée à une image random, cela donne.
-
-![Challenge](/images/310-bitcoin-challenge-real-pattern-sample.png "Challenge")
-
-Celà n'a abouti à rien concernant le challenge, mais c'est un skill toujours bon à prendre.
 
 ### Extraction du LSB du canal rouge ###
 
@@ -210,7 +186,7 @@ $ (echo "cry buyer grain save vault sign lyrics rhythm music fury horror mansion
 
 ![Challenge](/images/310-bitcoin-challenge-register.png "Challenge")
 
-## Dechiffrement du second tableau ##
+### Dechiffrement du second tableau ###
 
 En utilisant la même méthode que pour le premier tableau, nous obtenons la liste de mots :
 
@@ -230,6 +206,32 @@ Il s'agit d'un liste BIP39 valide permettant de déverrouiller un [wallet conten
 - Adresse : 1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR
 - Clé publique : 02707e976e321e77c6b301b14f1c64d00b2b67b11963ab739aadccba6ddca05862
 - Clé privée : KxPEUpQ5BE75UGRUVjNmf8dQuWsmP9jqL3FUUjavdRW69MEcmg6C
+
+## Pistes non concluantes (pour le moment) ##
+
+### La trame de fond ###
+
+Une trame de fond est détectable sur l'ensemble de l'image. On peut la mettre en évidence via une solarisation (appliquer un courbe de colorimétrique en triangle).
+
+![Challenge](/images/310-bitcoin-challenge-pattern.png "Challenge")
+
+Cette trame est constituée de tuiles de 128x120 pixels. Afin de l'isoler, j'ai extrait des zones sur fond blanc de l'image (principalement en haut à droite du tableau). A coups de copiers-collers et de déplacements au pixel, on obtient :
+
+![Challenge](/images/310-bitcoin-challenge-white-pattern.png "Challenge")
+
+Ensuite, j'ai constitué une image à partir de ce motif (dans Gimp, filtre "Tile") légèrement supérieure à la taille de l'image de départ. Je l'ai ensuite placée en couche en mode extraction de grain et l'ai calée au pixel près sur l'image de départ. Une normalisation plus tard, on obtient une image débarassée du motif :
+
+![Challenge](/images/310-bitcoin-challenge-pattern-removed.png "Challenge")
+
+En mode fusion de grain, on peut aussi récupérer la texture exacte ayant été appliquée sur l'image d'origine.
+
+![Challenge](/images/310-bitcoin-challenge-real-pattern.png "Challenge")
+
+Appliquée à une image random, cela donne.
+
+![Challenge](/images/310-bitcoin-challenge-real-pattern-sample.png "Challenge")
+
+Celà n'a abouti à rien concernant le challenge, mais c'est un skill toujours bon à prendre.
 
 ## Ressources
 
