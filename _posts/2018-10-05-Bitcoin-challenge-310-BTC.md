@@ -4,7 +4,7 @@ title: Bitcoin Challenge / 310 BTC cachés dans une image
 tags: [Bitcoin]
 ---
 
-Dans l'esprit du challenge du [challenge du logo de l'ANSSI](https://www.ssi.gouv.fr/actualite/le-challenge-anssi-qui-avait-ete-lance-en-fevrier-2012-a-ete-resolu/), un anonyme a lancé le 2 octobre sur [Reddit](https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin_challenge) et [BitcoinTalk](https://bitcointalk.org/index.php?topic=5042285) une invitation à relever un challenge : trouver la clé privée [cachée dans une image](https://bitcoinchallenge.codes) donnant accès à un wallet contenant 310 BTC. L'auteur a déjà apporté la preuve cryptographique qu'ils étaient en sa possession.
+Dans l'esprit du challenge du [challenge du logo de l'ANSSI](https://www.ssi.gouv.fr/actualite/le-challenge-anssi-qui-avait-ete-lance-en-fevrier-2012-a-ete-resolu/), un anonyme a lancé le 2 octobre sur [Reddit](https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin_challenge) et [BitcoinTalk](https://bitcointalk.org/index.php?topic=5042285) une invitation à relever un challenge : trouver la clé privée [cachée dans une image](https://bitcoinchallenge.codes) donnant accès à [un wallet contenant 310 BTC](https://www.blockchain.com/btc/address/39uAUwEFDi5bBbdBm5ViD8sxDBBrz7SUP4). L'auteur a déjà apporté la preuve cryptographique qu'ils étaient en sa possession en signant l'url du challenge avec la clé privée du wallet.
 
 Je ne me fais pas de faux espoirs, il y a des gens bien plus compétents que moi qui emporteront le prix. Cependant, la résolution de l'enigme reste un défi passionnant. J'indiquerai donc sur cette page l'état de mes recherches. N'hésitez pas à partager les votres dans les commentaires. Si vous souhaitez que l'on planche à plusieurs, n'hésitez pas non plus ; on pourrait par exemple se retrouver sur un canal IRC dédié. Bonne chance à tous !
 
@@ -116,7 +116,7 @@ On appellera ce fichier **red-lsb.enc**.
 
 ### Le tableau de 18 valeurs ###
 
-Cette énigme a été résolue dès le deuxième jour du challenge. Elle permet d'obtenir la clé privée d'un [wallet qui contenait initialement 0.1 BTC](https://blockexplorer.com/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
+Cette énigme a été résolue dès le deuxième jour du challenge. Elle permet d'obtenir la clé privée d'un [wallet qui contenait initialement 0.1 BTC](https://www.blockchain.com/btc/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
 
 La première étape consiste à repérer une date cachée dans l'image.
 
@@ -141,7 +141,7 @@ dec2hex(mod(hex2dec(mid(CELLULE_DE_A;2;1))-mid(CELLULE_CORRESPONDANTE_DE_B;2;1);
 dec2hex(mod(hex2dec(mid(CELLULE_DE_A;3;1))-mid(CELLULE_CORRESPONDANTE_DE_B;3;1);16))
 ```
 
-On obtient donc 12 mots qui correspondent à la clé privée d'un [wallet contenant 0.1 BTC](https://blockexplorer.com/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
+On obtient donc 12 mots qui correspondent à la clé privée d'un [wallet contenant 0.1 BTC](https://www.blockchain.com/btc/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
 
 ```
 cry buyer grain save vault sign
@@ -222,7 +222,7 @@ debris slim immune lock actual tide
 gas vapor fringe pole flat glance
 ```
 
-Il s'agit d'un liste BIP39 valide permettant de déverrouiller un [wallet contenant 0.2 BTC](https://blockexplorer.com/address/1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR) :
+Il s'agit d'un liste BIP39 valide permettant de déverrouiller un [wallet contenant 0.2 BTC](https://www.blockchain.com/btc/address/1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR) :
 
 - Adresse : 1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR
 - Clé privée : KxPEUpQ5BE75UGRUVjNmf8dQuWsmP9jqL3FUUjavdRW69MEcmg6C
@@ -232,3 +232,7 @@ Il s'agit d'un liste BIP39 valide permettant de déverrouiller un [wallet conten
 - Site du challenge : [https://bitcoinchallenge.codes](https://bitcoinchallenge.codes)
 - Conversion d'image en binaire : [https://www.dcode.fr/image-binaire](https://www.dcode.fr/image-binaire)
 - Convertisseur BIP-0039: [Mnemonic Code Converter](https://iancoleman.io/bip39/#english)
+- [Wallet contenant 0.1 BTC](https://www.blockchain.com/btc/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV)
+- [Wallet contenant 0.2 BTC](https://www.blockchain.com/btc/address/1G7qsUy5x9bUd1pRfhVZ7cuB5cMUP4hsfR)
+- [Wallet contenant 0.31 BTC](https://www.blockchain.com/btc/address/3NPZiNWiD7cCfXZa1D8tnEZBPgQ884cVw7)
+- [Wallet contenant 310 BTC](https://www.blockchain.com/btc/address/39uAUwEFDi5bBbdBm5ViD8sxDBBrz7SUP4)
