@@ -208,6 +208,8 @@ $ (echo "cry buyer grain save vault sign lyrics rhythm music fury horror mansion
 273e2b95648fd3cbad0d7fe3ed820e783c0b12fdbe29b57bfb2d1f243d92b1a5  -
 ```
 
+![Challenge](/images/310-bitcoin-challenge-register.png "Challenge")
+
 ## Dechiffrement du second tableau ##
 
 En utilisant la même méthode que pour le premier tableau, nous obtenons la liste de mots :
