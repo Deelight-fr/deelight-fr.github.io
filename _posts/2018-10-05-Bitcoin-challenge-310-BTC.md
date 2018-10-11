@@ -14,6 +14,44 @@ Je ne me fais pas de faux espoirs, il y a des gens bien plus compétents que moi
 
 ## Les découvertes ##
 
+### Le tableau de 18 valeurs ###
+
+Cette énigme a été résolue dès le deuxième jour du challenge. Elle permet d'obtenir la clé privée d'un [wallet qui contenait initialement 0.1 BTC](https://www.blockchain.com/btc/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
+
+La première étape consiste à repérer une date cachée dans l'image.
+
+![Challenge](/images/310-bitcoin-challenge-date.png "Challenge")
+
+"OCT 2 2018" nous donne en format propre (= pas américain) : "20181002".
+
+Nous prenons ensuite les caractères de cette chaîne 1 par 1 (en repétant la chaîne au besoin) et les soustrayons aux caractères du tableau initial (en hexadécimal). En cas de valeur négative, on repart de la valeur maximum (F en hexadécimal) et on soustrait le reste.
+
+Si ce n'est pas clair, imaginez un cadenas à code en hexadécimal (donc des molettes à 16 positions). si vous devez soustraire 4 d'une molette qui se trouve sur 2, vous allez passer de 2 à 1, de 1 à 0, de 0 à F, et enfin de F à E. On peut faire ce calcul en convertissant en décimal et utilisant notre cher modulo : 2 - 4 = -2 et -2 mod 16 = 14 (E en hexadécimal).
+Le nombre de crans pour chaque molette correspond à ce qu'indique chaque caractère correspondant dans la clé "20181002" : descendre la première molette de 2, la deuxième de 0, la troisième de 1...
+
+On constate ainsi que la première ligne nous donne une série de "310" qui nous suggère que nous sommes sur la bonne piste. Toutes les autres valeurs du tableau donnent des chiffres (une fois la conversion hexadécimal vers décimal effectuée) inférieurs à 2048. Ces valeurs correspondent à un codage possible en BIP-0039 (liste de mots parmi [2048 possibilités](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)).
+
+![Challenge](/images/310-bitcoin-challenge-table-decoding.png "Challenge")
+
+La formule utilisée dans chaque cellule du tableau C (attention les yeux) :
+
+```
+=dec2hex(mod(hex2dec(mid(CELLULE_DE_A;1;1))-mid(CELLULE_CORRESPONDANTE_DE_B;1;1);16)) &
+dec2hex(mod(hex2dec(mid(CELLULE_DE_A;2;1))-mid(CELLULE_CORRESPONDANTE_DE_B;2;1);16)) &
+dec2hex(mod(hex2dec(mid(CELLULE_DE_A;3;1))-mid(CELLULE_CORRESPONDANTE_DE_B;3;1);16))
+```
+
+On obtient donc 12 mots qui correspondent à la clé privée d'un [wallet contenant 0.1 BTC](https://www.blockchain.com/btc/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
+
+```
+cry buyer grain save vault sign
+lyrics rhythm music fury horror mansion
+```
+
+- Adresse : 1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV
+- Clé publique : 0376a376c4c2fc0ffad1a5d87f2100343d2cd29a5f7859458e545857727133e349
+- Clé privée : KzkZxdhRGxB7eX4u1skXkfJ7VB8JfPp7Nfos3jiF7PQUNMh2SHDE
+
 ### Le masque de transparence ###
 
 Le PNG d'origine présente des zones légèrement transparentes invisibles à l'oeil nu (opacité de 253 sur 255). Voici comment les mettre en évidence avec Gimp :
@@ -61,7 +99,7 @@ Qui convertie en ASCII donne :
 Ur2y+2iZ2LEaxNM7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0osjH9DqbM6DUptu3HJbAVwXQ==
 ```
 
-Qui correspond la fin du fichier chiffré obtenu dans la ligne 310 du canal alpha..
+Elle correspond la fin du fichier chiffré **alpha.enc** obtenu dans la ligne 310 du canal alpha. Il y a donc une relation entre ces deux lignes. 
 
 Si on effectue une opération XOR entre le binaire inversé du canal alpha et le binaire inversé du dernier bit du canal rouge, on obtient :
 
@@ -90,44 +128,6 @@ On reconnait la encore la chaine `U2Fs...` caractéristique d'un fichier chiffre
 
 On appellera ce fichier **red-lsb.enc**.
 
-### Le tableau de 18 valeurs ###
-
-Cette énigme a été résolue dès le deuxième jour du challenge. Elle permet d'obtenir la clé privée d'un [wallet qui contenait initialement 0.1 BTC](https://www.blockchain.com/btc/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
-
-La première étape consiste à repérer une date cachée dans l'image.
-
-![Challenge](/images/310-bitcoin-challenge-date.png "Challenge")
-
-"OCT 2 2018" nous donne en format propre (= pas américain) : "20181002".
-
-Nous prenons ensuite les caractères de cette chaîne 1 par 1 (en repétant la chaîne au besoin) et les soustrayons aux caractères du tableau initial (en hexadécimal). En cas de valeur négative, on repart de la valeur maximum (F en hexadécimal) et on soustrait le reste.
-
-Si ce n'est pas clair, imaginez un cadenas à code en hexadécimal (donc des molettes à 16 positions). si vous devez soustraire 4 d'une molette qui se trouve sur 2, vous allez passer de 2 à 1, de 1 à 0, de 0 à F, et enfin de F à E. On peut faire ce calcul en convertissant en décimal et utilisant notre cher modulo : 2 - 4 = -2 et -2 mod 16 = 14 (E en hexadécimal).
-Le nombre de crans pour chaque molette correspond à ce qu'indique chaque caractère correspondant dans la clé "20181002" : descendre la première molette de 2, la deuxième de 0, la troisième de 1...
-
-On constate ainsi que la première ligne nous donne une série de "310" qui nous suggère que nous sommes sur la bonne piste. Toutes les autres valeurs du tableau donnent des chiffres (une fois la conversion hexadécimal vers décimal effectuée) inférieurs à 2048. Ces valeurs correspondent à un codage possible en BIP-0039 (liste de mots parmi [2048 possibilités](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)).
-
-![Challenge](/images/310-bitcoin-challenge-table-decoding.png "Challenge")
-
-La formule utilisée dans chaque cellule du tableau C (attention les yeux) :
-
-```
-=dec2hex(mod(hex2dec(mid(CELLULE_DE_A;1;1))-mid(CELLULE_CORRESPONDANTE_DE_B;1;1);16)) &
-dec2hex(mod(hex2dec(mid(CELLULE_DE_A;2;1))-mid(CELLULE_CORRESPONDANTE_DE_B;2;1);16)) &
-dec2hex(mod(hex2dec(mid(CELLULE_DE_A;3;1))-mid(CELLULE_CORRESPONDANTE_DE_B;3;1);16))
-```
-
-On obtient donc 12 mots qui correspondent à la clé privée d'un [wallet contenant 0.1 BTC](https://www.blockchain.com/btc/address/1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV).
-
-```
-cry buyer grain save vault sign
-lyrics rhythm music fury horror mansion
-```
-
-- Adresse : 1446C8HqMtvWtEgu1JnjwLcPESSruhzkmV
-- Clé publique : 0376a376c4c2fc0ffad1a5d87f2100343d2cd29a5f7859458e545857727133e349
-- Clé privée : KzkZxdhRGxB7eX4u1skXkfJ7VB8JfPp7Nfos3jiF7PQUNMh2SHDE
-
 ### Les courbes de Bézier ###
 
 Appliquer un effet miroir horizontal à l'ensemble des courbes permet de relier plusieurs cellules marquées.
@@ -141,7 +141,25 @@ On se retrouve avec 5 groupes de caractères :
 - 9F (ou F9)
 - 7
 
-A partir de la, j'ai été un peu bourrin et généré la liste complete des permutations possibles. On finit par dechiffrer les deux fichiers :
+A partir de la, j'ai été un peu bourrin et généré la liste complete des permutations possibles (1920) via un script Python :
+
+```python
+import itertools
+
+sets = [ ['L3', '3L'], ['02', '20'], ['584', '485'], ['9F', 'F9'], ['7'] ]
+all_item_permutations = []
+
+sets_permutations = list(itertools.permutations(sets, len(sets)))
+
+for sets_permutation in sets_permutations:
+    item_permutations = list(itertools.product(*sets_permutation))
+    all_item_permutations += item_permutations
+
+for permutation in all_item_permutations:
+    print(''.join(permutation))
+```
+
+On finit par dechiffrer les deux fichiers :
 
 ```bash
 $ openssl enc -aes-256-cbc -md md5 -base64 -d -a -k "02L3F95847" -in red-lsb.enc
