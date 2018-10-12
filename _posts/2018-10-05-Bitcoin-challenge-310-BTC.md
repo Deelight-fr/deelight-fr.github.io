@@ -166,21 +166,8 @@ for permutation in all_item_permutations:
 On finit par dechiffrer les deux fichiers :
 
 ```bash
-$ openssl enc -aes-256-cbc -md md5 -base64 -d -a -k "02L3F95847" -in red-lsb.enc
-Bitcoin Challenge ..... 310 BTC
-https://bitcoinchallenge.codes/
-
----
-
-You're either very very close, or working in the wrong direction :)
-
-Here you go : Z465/
-
----
-```
-
-```bash
-$ openssl enc -aes-256-cbc -md md5 -base64 -d -a -k "L379F48502" -in alpha.enc
+$ openssl enc -aes-256-cbc -md md5 -base64 -d -a -k "L379F48502" -in alpha.enc -out alpha.dec
+$ cat alpha.dec
 Bitcoin Challenge ..... 310 BTC
 https://bitcoinchallenge.codes/
 
@@ -198,6 +185,22 @@ Now find something really interesting here:
 
 ---
 ```
+
+```bash
+$ openssl enc -aes-256-cbc -md md5 -base64 -d -a -k "02L3F95847" -in red-lsb.enc -out red-lsb.dec
+$ cat red-lsb.dec
+Bitcoin Challenge ..... 310 BTC
+https://bitcoinchallenge.codes/
+
+---
+
+You're either very very close, or working in the wrong direction :)
+
+Here you go : Z465/
+
+---
+```
+
 
 La concaténation de toutes ces données nous permet d'obtenir un hash sha256 qui est accepté sur la page d'enregistrement sur laquelle pointait le QRcode :
 
