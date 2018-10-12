@@ -81,6 +81,10 @@ On appellera ce fichier **alpha.enc**.
 
 ### Extraction du LSB du canal rouge ###
 
+LSB : Least Significant Bit (bit de poids faible)
+
+On comparant tout les couches visibles de l'image d'origine, on constate des differences dans la couche rouge, notamment sur la ligne 310.
+
 En extrayant l'inverse du dernier bit de la valeur de chaque pixel de la ligne 310 du canal rouge, on obtient le code binaire suivant :
 
 ```
@@ -266,13 +270,20 @@ Légende :
 - noir : valeur du canal rouge égale à celle du canal vert, et la valeur du canal vert est à zéro
 - blanc : valeur du canal rouge égale à celle du canal vert, et la valeur du canal vert est à 255 (maximum)
 
-On constate ici que la valeur du canal rouge varie en +1 et -1 bits par rapport au canal vert. C'est très symptomatique d'une information stockée sur le LSB.
+On remarque ici que la valeur du canal rouge varie en +1 et -1 bits par rapport au canal vert. C'est très symptomatique d'une information stockée sur le LSB d'un canal. En effet, le remplecament arbitraire du dernier bit provoque une modification de la valeur décimale comprise entre -1 et 1. En creusant un peu plus, on peut constater que ce remplacement n'est arbitraire : certaines valeurs passant par exemple de 1101111**1** à 1110000**0**, alors qu'il aurait été plus simple de mettre 1101111**0**).
+
+En analysant en détail, on remarque trois cas :
+- passage du lsb de 0 à 1 : +1
+- passage du lsb de 1 à 0 (si l'octet de départ différent de 11111111) : +1
+- passage du lsb de 1 à 0 (si l'octet de départ vaut 11111111) : -1
 
 Quand on regarde le tableau du bas de l'image, on constate aussi des différences entre les canaux rouge et vert, mais d'une forme très différente :
 
 ![Challenge](/images/310-bitcoin-challenge-redlayer-analysis-table.png "Challenge")
 
-Nous n'avons que des variations de -1 bit pour le canal rouge. Si une information est stockée ici, elle ne l'est pas de la même manière que pour la ligne 310. On constate aussi que les variations sont beaucoup moins régulières.
+Nous n'avons que des variations de -1 bit pour le canal rouge. Si une information est stockée ici, elle ne l'est pas de la même manière que pour la ligne 310. Le fait qu'il n'y ait pas de variation de +1 par rapport au canal de référence pourrait laisser penser qu'un LSB à 0 n'a jamais été remplacé par un 1 (+1), mais ce n'est pas le cas. On trouve des altérations du type : 1001000**0** -> 1000111**1** (qui correspond bien à -1).
+
+On constate aussi que les variations sont beaucoup moins régulières. Ces variations ponctuelles cherchent-elles à mettre en évidence des valeurs particulières sur les pixels du canal de référence ?
 
 ## Ressources
 
