@@ -251,6 +251,29 @@ Appliquée à une image random, cela donne.
 
 Celà n'a abouti à rien concernant le challenge, mais c'est un skill toujours bon à prendre.
 
+### La couche rouge ###
+
+On a déjà prouvé que la ligne 310 de la couche rouge contenait un fichier encodé sur le dernier bit de données.
+
+![Challenge](/images/310-bitcoin-challenge-redlayer-analysis-line.png "Challenge")
+
+Cette image est issue de la comparaison des couches rouge et vert.
+
+Légende :
+- rouge : la valeur du canal rouge est 1 bit inférieure à celle du canal vert
+- vert : la valeur du canal rouge est 1 bit supérieure à celle du canal vert
+- gris : valeur du canal rouge égale à celle du canal vert 
+- noir : valeur du canal rouge égale à celle du canal vert, et la valeur du canal vert est à zéro
+- blanc : valeur du canal rouge égale à celle du canal vert, et la valeur du canal vert est à 255 (maximum)
+
+On constate ici que la valeur du canal rouge varie en +1 et -1 bits par rapport au canal vert. C'est très symptomatique d'une information stockée sur le LSB.
+
+Quand on regarde le tableau du bas de l'image, on constate aussi des différences entre les canaux rouge et vert, mais d'une forme très différente :
+
+![Challenge](/images/310-bitcoin-challenge-redlayer-analysis-table.png "Challenge")
+
+Nous n'avons que des variations de -1 bit pour le canal rouge. Si une information est stockée ici, elle ne l'est pas de la même manière que pour la ligne 310. On constate aussi que les variations sont beaucoup moins régulières.
+
 ## Ressources
 
 - Site du challenge : [https://bitcoinchallenge.codes](https://bitcoinchallenge.codes)
