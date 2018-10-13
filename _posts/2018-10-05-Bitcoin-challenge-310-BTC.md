@@ -248,6 +248,8 @@ Ensuite, j'ai constitué une image à partir de ce motif (dans Gimp, filtre "Til
 
 ![Challenge](/images/310-bitcoin-challenge-pattern-removed.png "Challenge")
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m8C-zgHnAMk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 En mode fusion de grain, on peut aussi récupérer la texture exacte ayant été appliquée sur l'image d'origine.
 
 ![Challenge](/images/310-bitcoin-challenge-real-pattern.png "Challenge")
