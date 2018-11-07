@@ -6,7 +6,7 @@ tags: [Bitcoin]
 
 Dans l'esprit du challenge du [challenge du logo de l'ANSSI](https://www.ssi.gouv.fr/actualite/le-challenge-anssi-qui-avait-ete-lance-en-fevrier-2012-a-ete-resolu/), un anonyme a lancé le 2 octobre sur [Reddit](https://www.reddit.com/r/Bitcoin/comments/9kq7it/introducing_the_310_btc_bitcoin_challenge) et [BitcoinTalk](https://bitcointalk.org/index.php?topic=5042285) une invitation à relever un challenge : trouver la clé privée [cachée dans une image](https://bitcoinchallenge.codes) donnant accès à [un wallet contenant 310 BTC](https://www.blockchain.com/btc/address/39uAUwEFDi5bBbdBm5ViD8sxDBBrz7SUP4). L'auteur a déjà apporté la preuve cryptographique qu'ils étaient en sa possession en signant l'url du challenge avec la clé privée du wallet.
 
-Je ne me fais pas de faux espoirs, il y a des gens bien plus compétents que moi qui emporteront le prix. Cependant, la résolution de l'enigme reste un défi passionnant. J'indiquerai donc sur cette page l'état de mes recherches. N'hésitez pas à partager les votres dans les commentaires. Si vous souhaitez que l'on planche à plusieurs, n'hésitez pas non plus ; on pourrait par exemple se retrouver sur un canal IRC dédié. Bonne chance à tous !
+Je ne me fais pas de faux espoirs, il y a des gens bien plus compétents que moi qui emporteront le prix. Cependant, la résolution de l’énigme reste un défi passionnant. J'indiquerai donc sur cette page l'état de mes recherches. N'hésitez pas à partager les vôtres dans les commentaires. Si vous souhaitez que l'on planche à plusieurs, n'hésitez pas non plus ; on pourrait par exemple se retrouver sur un canal IRC dédié. Bonne chance à tous !
 
 ## L'image source
 
@@ -24,7 +24,7 @@ La première étape consiste à repérer une date cachée dans l'image.
 
 "OCT 2 2018" nous donne en format propre (= pas américain) : "20181002".
 
-Nous prenons ensuite les caractères de cette chaîne 1 par 1 (en repétant la chaîne au besoin) et les soustrayons aux caractères du tableau initial (en hexadécimal). En cas de valeur négative, on repart de la valeur maximum (F en hexadécimal) et on soustrait le reste.
+Nous prenons ensuite les caractères de cette chaîne 1 par 1 (en répétant la chaîne au besoin) et les soustrayons aux caractères du tableau initial (en hexadécimal). En cas de valeur négative, on repart de la valeur maximum (F en hexadécimal) et on soustrait le reste.
 
 Si ce n'est pas clair, imaginez un cadenas à code en hexadécimal (donc des molettes à 16 positions). si vous devez soustraire 4 d'une molette qui se trouve sur 2, vous allez passer de 2 à 1, de 1 à 0, de 0 à F, et enfin de F à E. On peut faire ce calcul en convertissant en décimal et utilisant notre cher modulo : 2 - 4 = -2 et -2 mod 16 = 14 (E en hexadécimal).
 Le nombre de crans pour chaque molette correspond à ce qu'indique chaque caractère correspondant dans la clé "20181002" : descendre la première molette de 2, la deuxième de 0, la troisième de 1...
@@ -54,7 +54,7 @@ lyrics rhythm music fury horror mansion
 
 ### Le masque de transparence ###
 
-Le PNG d'origine présente des zones légèrement transparentes invisibles à l'oeil nu (opacité de 253 sur 255). Voici comment les mettre en évidence avec Gimp :
+Le PNG d'origine présente des zones légèrement transparentes invisibles à l’œil nu (opacité de 253 sur 255). Voici comment les mettre en évidence avec Gimp :
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/63ltk3OcTq8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -75,7 +75,7 @@ M7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0os
 jH9DqbM6DUptu3HJbAVwXQ==
 ```
 
-Si l'on fait un décodage base64, la chaine obtenue débute par "Salted". C'est visiblement un fichier de 256 octets chiffré via OpenSSL. Reste à trouver l'algorithme de chiffrement et la clé.
+Si l'on fait un décodage base64, la chaîne obtenue débute par "Salted". C'est visiblement un fichier de 256 octets chiffré via OpenSSL. Reste à trouver l'algorithme de chiffrement et la clé.
 
 On appellera ce fichier **alpha.enc**.
 
@@ -83,7 +83,7 @@ On appellera ce fichier **alpha.enc**.
 
 LSB : Least Significant Bit (bit de poids faible)
 
-On comparant tout les couches visibles de l'image d'origine, on constate des differences dans la couche rouge, notamment sur la ligne 310.
+On comparant tout les couches visibles de l'image d'origine, on constate des différences dans la couche rouge, notamment sur la ligne 310.
 
 En extrayant l'inverse du dernier bit de la valeur de chaque pixel de la ligne 310 du canal rouge, on obtient le code binaire suivant :
 
@@ -103,7 +103,7 @@ Qui convertie en ASCII donne :
 Ur2y+2iZ2LEaxNM7UZqcPwYgm6FoKOVjnqdeg30R27jc6AoFPyRZ2g8+EJMp3n/pf94oSCLEWkc0osjH9DqbM6DUptu3HJbAVwXQ==
 ```
 
-Elle correspond la fin du fichier chiffré **alpha.enc** obtenu dans la ligne 310 du canal alpha. Il y a donc une relation entre ces deux lignes. 
+Elle correspond la fin du fichier chiffré **alpha.enc** obtenu dans la ligne 310 du canal alpha. Il y a donc une relation entre ces deux lignes.
 
 Si on effectue une opération XOR entre le binaire inversé du canal alpha et le binaire inversé du dernier bit du canal rouge, on obtient :
 
@@ -128,7 +128,7 @@ THiWMkRq45FsPXHs3TjYqcJz7QzQ8HeM340EwWQWXAi0fVy+r6NPmiJRgMgMqLCu
 ll4KXhAzrGQZi5E4sajQOBGQfaJjei5fHXXO6sxeYsFcuxzo3JdMOF3JFYQtuUDY
 ```
 
-On reconnait la encore la chaine `U2Fs...` caractéristique d'un fichier chiffre via OpenSSL.
+On reconnaît la encore la chaîne `U2Fs...` caractéristique d'un fichier chiffre via OpenSSL.
 
 On appellera ce fichier **red-lsb.enc**.
 
@@ -145,7 +145,7 @@ On se retrouve avec 5 groupes de caractères :
 - 9F (ou F9)
 - 7
 
-A partir de la, j'ai été un peu bourrin et généré la liste complete des permutations possibles (1920) via un script Python :
+A partir de la, j'ai été un peu bourrin et généré la liste complète des permutations possibles (1920) via un script Python :
 
 ```python
 import itertools
@@ -163,7 +163,7 @@ for permutation in all_item_permutations:
     print(''.join(permutation))
 ```
 
-On finit par dechiffrer les deux fichiers :
+On finit par déchiffrer les deux fichiers :
 
 ```bash
 $ openssl enc -aes-256-cbc -md md5 -base64 -d -a -k "L379F48502" -in alpha.enc -out alpha.dec
@@ -211,7 +211,7 @@ $ (echo "cry buyer grain save vault sign lyrics rhythm music fury horror mansion
 
 ![Challenge](/images/310-bitcoin-challenge-register.png "Challenge")
 
-### Dechiffrement du second tableau ###
+### Déchiffrement du second tableau ###
 
 En utilisant la même méthode que pour le premier tableau, nous obtenons la liste de mots :
 
@@ -244,7 +244,7 @@ Cette trame est constituée de tuiles de 128x120 pixels. Afin de l'isoler, j'ai 
 
 ![Challenge](/images/310-bitcoin-challenge-white-pattern.png "Challenge")
 
-Ensuite, j'ai constitué une image à partir de ce motif (dans Gimp, filtre "Tile") légèrement supérieure à la taille de l'image de départ. Je l'ai ensuite placée en couche en mode extraction de grain et l'ai calée au pixel près sur l'image de départ. Une normalisation plus tard, on obtient une image débarassée du motif :
+Ensuite, j'ai constitué une image à partir de ce motif (dans Gimp, filtre "Tile") légèrement supérieure à la taille de l'image de départ. Je l'ai ensuite placée en couche en mode extraction de grain et l'ai calée au pixel près sur l'image de départ. Une normalisation plus tard, on obtient une image débarrassée du motif :
 
 ![Challenge](/images/310-bitcoin-challenge-pattern-removed.png "Challenge")
 
@@ -258,7 +258,7 @@ Appliquée à une image random, cela donne.
 
 ![Challenge](/images/310-bitcoin-challenge-real-pattern-sample.png "Challenge")
 
-Celà n'a abouti à rien concernant le challenge, mais c'est un skill toujours bon à prendre.
+Cela n'a abouti à rien concernant le challenge, mais c'est un skill toujours bon à prendre.
 
 ### La couche rouge ###
 
@@ -271,11 +271,11 @@ Cette image est issue de la comparaison des couches rouge et vert.
 Légende :
 - rouge : la valeur du canal rouge est 1 bit inférieure à celle du canal vert
 - vert : la valeur du canal rouge est 1 bit supérieure à celle du canal vert
-- gris : valeur du canal rouge égale à celle du canal vert 
+- gris : valeur du canal rouge égale à celle du canal vert
 - noir : valeur du canal rouge égale à celle du canal vert, et la valeur du canal vert est à zéro
 - blanc : valeur du canal rouge égale à celle du canal vert, et la valeur du canal vert est à 255 (maximum)
 
-On remarque ici que la valeur du canal rouge varie en +1 et -1 bits par rapport au canal vert. C'est très symptomatique d'une information stockée sur le LSB d'un canal. En effet, le remplecament arbitraire du dernier bit provoque une modification de la valeur décimale comprise entre -1 et 1. En creusant un peu plus, on peut constater que ce remplacement n'est arbitraire : certaines valeurs passant par exemple de 1101111**1** à 1110000**0**, alors qu'il aurait été plus simple de mettre 1101111**0**).
+On remarque ici que la valeur du canal rouge varie en +1 et -1 bits par rapport au canal vert. C'est très symptomatique d'une information stockée sur le LSB d'un canal. En effet, le remplacement arbitraire du dernier bit provoque une modification de la valeur décimale comprise entre -1 et 1. En creusant un peu plus, on peut constater que ce remplacement n'est arbitraire : certaines valeurs passant par exemple de 1101111**1** à 1110000**0**, alors qu'il aurait été plus simple de mettre 1101111**0**).
 
 En analysant en détail, on remarque trois cas :
 - passage du lsb de 0 à 1 : +1

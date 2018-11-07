@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Bitcoin / Installation d'un noeud Lightning testnet bitcoind/lnd (obsolète)
+title: Bitcoin / Installation d'un nœud Lightning testnet bitcoind/lnd (obsolète)
 tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 ---
 
-Installation d'un noeud lightning bitcoind (au lieu de btcd) + lnd sous Ubuntu 16.04.3 server
+Installation d'un nœud lightning bitcoind (au lieu de btcd) + lnd sous Ubuntu 16.04.3 server
 
 **17/01/2018 : Le support bitcoind ayant été intégré à la branche MASTER de lnd, cette doc n'est plus à jour. Une nouvelle version est disponible [ici](http://blog.deelight.org/Bitcoin-installation-noeud-lightning-base-sur-bitcoind/).**
 
@@ -93,18 +93,18 @@ cd $GOPATH/src/github.com/lightningnetwork/lnd
 git fetch origin pull/447/head:bitcoind-backend
 git checkout bitcoind-backend
 glide install
-  
+
 go get -u github.com/roasbeef/btcwallet
 cd $GOPATH/src/github.com/roasbeef/btcwallet
 git fetch origin pull/9/head:bitcoind-backend
 git checkout bitcoind-backend
-  
+
 cd $GOPATH/src/github.com/lightningnetwork/lnd/vendor/github.com/roasbeef
 rm -rf btcwallet
 ln -s $GOPATH/src/github.com/roasbeef/btcwallet .
-  
+
 sudo apt-get install libzmq3-dev
-  
+
 cd $GOPATH/src/github.com/lightningnetwork/lnd
 go install . ./cmd/...
 ```
@@ -124,12 +124,12 @@ debughtlc=true
 maxpendingchannels=10
 externalip=mon_ip_externe
 peerport=9735
-  
+
 [Bitcoin]
 bitcoin.active=1
 bitcoin.rpcuser=mon_login
 bitcoin.rpcpass=mon_password
-  
+
 [Core]
 core.active=1
 ```
@@ -166,9 +166,9 @@ Bien noter cette adresse car elle ne sera pas affichée ultérieurement.
 
 Via ce faucet par exemple : [https://testnet.manu.backend.hamburg/faucet](https://testnet.manu.backend.hamburg/faucet)
 
-#### Connexion à un autre noeud
+#### Connexion à un autre nœud
 
-On peut trouver des adresses de noeuds sur [https://explorer.acinq.co](https://explorer.acinq.co)
+On peut trouver des adresses de nœuds sur [https://explorer.acinq.co](https://explorer.acinq.co)
 
 ```bash
 lncli connect 03f113414ebdc6c1fb0f33c99cd5a1d09dd79e7fdf2468cf1fe1af6674361695d2@51.15.213.104:9735

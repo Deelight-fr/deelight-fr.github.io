@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Bitcoin / Installation d'un noeud Lightning sur Raspberry Pi 1
+title: Bitcoin / Installation d'un nœud Lightning sur Raspberry Pi 1
 tags: [Bitcoin, LightningNetwork, Cryptocurrency, Raspberry Pi]
 ---
 
 Cette procédure a été réalisée sur un Raspberry Pi 1 Modele B+
 tournant sous Raspian stretch lite.
 
-Ce Raspberry est doté d'un CPU mono-coeur cadencé à 700 MHz, et de 512 Mo de RAM.
+Ce Raspberry est doté d'un CPU mono-cœur cadencé à 700 MHz, et de 512 Mo de RAM.
 
-Il s'agit plus ici de s'amuser que d'obtenir un noeud Lightning fonctionnel ;
+Il s'agit plus ici de s'amuser que d'obtenir un nœud Lightning fonctionnel ;
 nous sommes aux limites de ce que peut supporter un machine aussi modeste.
 
 La blockchain a été au préalable téléchargée depuis une autre machine, puis mise à
@@ -85,7 +85,7 @@ Là aussi, il faudra être patient...
 btcd --testnet --txindex --rpcuser=mon_login --rpcpass=mon_password
 ```
 
-Le démarrage va être très long. Dans mon cas, celà a pris trois heures :
+Le démarrage va être très long. Dans mon cas, cela a pris trois heures :
 
 ```text
 2018-01-03 01:54:46.270 [INF] CHAN: Loading block index.  This might take a while...
@@ -94,7 +94,7 @@ Le démarrage va être très long. Dans mon cas, celà a pris trois heures :
 
 ## Création d'un fichier ~/.lnd/lnd.conf
 
-Celà simplifiera le lancement le lnd :
+Cela simplifiera le lancement le lnd :
 
 ```text
 [Application Options]
@@ -103,7 +103,7 @@ debughtlc=true
 maxpendingchannels=10
 externalip=<mon_ip_externe>
 peerport=9735
-  
+
 [Bitcoin]
 bitcoin.active=1
 bitcoin.rpcuser=mon_login
@@ -124,7 +124,7 @@ Il lui faudra un petit bout de temps pour réussir à se caler avec btcd.
 
 ```bash
 lncli create
-Input wallet password: 
+Input wallet password:
 Confirm wallet password:
 ```
 
@@ -153,9 +153,9 @@ Bien noter cette adresse car elle ne sera pas affichée ultérieurement.
 
 Via ce faucet par exemple : [https://testnet.manu.backend.hamburg/faucet](https://testnet.manu.backend.hamburg/faucet)
 
-## Connexion à un autre noeud
+## Connexion à un autre nœud
 
-On peut trouver des adresses de noeuds sur [https://explorer.acinq.co](https://explorer.acinq.co)
+On peut trouver des adresses de nœuds sur [https://explorer.acinq.co](https://explorer.acinq.co)
 
 ```bash
 lncli connect 03f113414ebdc6c1fb0f33c99cd5a1d09dd79e7fdf2468cf1fe1af6674361695d2@51.15.213.104:9735

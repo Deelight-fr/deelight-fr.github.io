@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bitcoin / Installation d'un noeud Lightning sur testnet - Partie 1
+title: Bitcoin / Installation d'un nœud Lightning sur testnet - Partie 1
 tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 ---
 
@@ -68,4 +68,4 @@ On peut obtenir le numéro du dernier block synchronisé via :
 btcctl --testnet --rpcuser=mon_login --rpcpass=mon_password getinfo | grep blocks
 ```
 
-La suite : [Bitcoin / Installation d'un noeud Lightning sur testnet - Partie 2](/Bitcoin-installation-noeud-lightning-partie-2/)
+La suite : [Bitcoin / Installation d'un noeud Lightning sur testnet - Partie 2](/Bitcoin-installation-nœud-lightning-partie-2/)

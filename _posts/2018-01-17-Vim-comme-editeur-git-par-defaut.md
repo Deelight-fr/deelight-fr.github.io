@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Definir Vim comme éditeur par défault pour les commits Git
+title: Définir Vim comme éditeur par défaut pour les commits Git
 tags: [Git]
 ---
 

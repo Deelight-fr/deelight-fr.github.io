@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GitHub / Un blog Jekyll en 5mn chrono 
+title: GitHub / Un blog Jekyll en 5mn chrono
 tags: [Git, GitHub, Linux]
 ---
 
@@ -15,7 +15,7 @@ On peut rajouter des posts en créant des fichiers au format Markdown dans le do
 
 ## Développement local
 
-Pour pouvoir développer le site web en local, on doit cloner le répository précédemment créé, puis installer quelques packages :
+Pour pouvoir développer le site web en local, on doit cloner le repository précédemment créé, puis installer quelques packages :
 
 ```bash
 sudo apt-get install ruby ruby-dev

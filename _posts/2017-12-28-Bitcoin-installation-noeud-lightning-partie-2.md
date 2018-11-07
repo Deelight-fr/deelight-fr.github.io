@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Bitcoin / Installation d'un noeud Lightning sur testnet - Partie 2
+title: Bitcoin / Installation d'un nœud Lightning sur testnet - Partie 2
 tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 ---
 
 ## Création d'un fichier ~/.lnd/lnd.conf
 
-Celà simplifiera le lancement le lnd :
+Cela simplifiera le lancement le lnd :
 
 ```text
 [Application Options]
@@ -15,7 +15,7 @@ debughtlc=true
 maxpendingchannels=10
 externalip=<mon_ip_externe>
 peerport=9735
-  
+
 [Bitcoin]
 bitcoin.active=1
 bitcoin.rpcuser=mon_login
@@ -54,9 +54,9 @@ Bien noter cette adresse car elle ne sera pas affichée ultérieurement.
 
 Via ce faucet par exemple : [https://testnet.manu.backend.hamburg/faucet](https://testnet.manu.backend.hamburg/faucet)
 
-## Connexion à un autre noeud
+## Connexion à un autre nœud
 
-On peut trouver des adresses de noeuds sur [https://explorer.acinq.co](https://explorer.acinq.co)
+On peut trouver des adresses de nœuds sur [https://explorer.acinq.co](https://explorer.acinq.co)
 
 ```bash
 lncli connect 03f113414ebdc6c1fb0f33c99cd5a1d09dd79e7fdf2468cf1fe1af6674361695d2@51.15.213.104:9735

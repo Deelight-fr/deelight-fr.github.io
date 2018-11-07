@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bitcoin / Installation d'un noeud Lightning mainnet avec bitcoind et lnd 0.4-beta
+title: Bitcoin / Installation d'un nœud Lightning mainnet avec bitcoind et lnd 0.4-beta
 tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 ---
 
@@ -151,7 +151,7 @@ Bien noter cette adresse car elle ne sera pas affichée ultérieurement.
 
 Vous savez comment.
 
-#### Connexion à un autre noeud
+#### Connexion à un autre nœud
 
 ```bash
 lncli connect 03f113414ebdc6c1fb0f33c99cd5a1d09dd79e7fdf2468cf1fe1af6674361695d2@51.15.213.104:9735
@@ -165,7 +165,7 @@ On alloue dans cet exemple 300000 satoshis au nouveau channel.
 lncli openchannel 02464bfaaae78b98268a6a6d7e8f6a110c60dd1293811d6029b11ee9edb4bbf869 --local_amt 300000
 ```
 
-A partir d'ici, on peut effectuer des paiements, se connecter à d'autres noeuds, ouvrir de nouveaux channels etc.
+A partir d'ici, on peut effectuer des paiements, se connecter à d'autres nœuds, ouvrir de nouveaux channels etc.
 
 ## Ressources
 

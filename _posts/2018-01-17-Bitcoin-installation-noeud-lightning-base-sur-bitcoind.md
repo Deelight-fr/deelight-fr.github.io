@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Bitcoin / Installation d'un noeud Lightning testnet bitcoind/lnd
+title: Bitcoin / Installation d'un nœud Lightning testnet bitcoind/lnd
 tags: [Bitcoin, LightningNetwork, Cryptocurrency]
 ---
 
-Installation d'un noeud lightning bitcoind (au lieu de btcd) + lnd sous Ubuntu 16.04.3 server
+Installation d'un nœud lightning bitcoind (au lieu de btcd) + lnd sous Ubuntu 16.04.3 server
 
 Pour n'oublier aucune étape, je suis parti d'une machine virtuelle avec une installation vierge et à jour de la distribution. Rien d'autre n'a été installé hormis les groupes logiciels :
 
@@ -151,9 +151,9 @@ Bien noter cette adresse car elle ne sera pas affichée ultérieurement.
 
 Via ce faucet par exemple : [https://testnet.manu.backend.hamburg/faucet](https://testnet.manu.backend.hamburg/faucet)
 
-#### Connexion à un autre noeud
+#### Connexion à un autre nœud
 
-On peut trouver des adresses de noeuds sur [https://explorer.acinq.co](https://explorer.acinq.co)
+On peut trouver des adresses de nœuds sur [https://explorer.acinq.co](https://explorer.acinq.co)
 
 ```bash
 lncli connect 03f113414ebdc6c1fb0f33c99cd5a1d09dd79e7fdf2468cf1fe1af6674361695d2@51.15.213.104:9735
@@ -167,7 +167,7 @@ On alloue dans cet exemple 300000 satoshis au nouveau channel.
 lncli openchannel 02464bfaaae78b98268a6a6d7e8f6a110c60dd1293811d6029b11ee9edb4bbf869 --local_amt 300000
 ```
 
-A partir d'ici, on peut effectuer des paiements, se connecter à d'autres noeuds, ouvrir de nouveaux channels etc.
+A partir d'ici, on peut effectuer des paiements, se connecter à d'autres nœuds, ouvrir de nouveaux channels etc.
 
 ## Ressources
 

@@ -18,7 +18,7 @@ en arrière-plan (à la manière de `screen`).
 | `tmux -a`          | se r**a**ttacher un tmux détaché |
 | CTRL-b "           | diviser un terminal horizontalement  |
 | CTRL-b %           | diviser un terminal verticalement  |
-| CTRL-b *fleche*    | changer de fenêtre (dans la direction indiquée)  |
+| CTRL-b *flèche*    | changer de fenêtre (dans la direction indiquée)  |
 | CTRL-b c           | **c**réér un nouvel onglet |
 | CTRL-b p           | aller à l'onglet précédent (***p**revious*) |
 | CTRL-b n           | aller à l'onglet suivant (***n**ext*) |
