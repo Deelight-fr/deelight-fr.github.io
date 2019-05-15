@@ -4,7 +4,7 @@ title: Et si Windows devenait une distribution Linux ?
 tags: [Linux, Windows]
 ---
 
-L'idée peut faire sourire, mais quand on y réflèchit bien, elle n'est pas si absurde que ça.
+L'idée peut faire sourire, mais quand on y réfléchit bien, elle n'est pas si absurde que ça.
 Il s'agirait bien évidemment d'une évolution à long terme, peut-être de l'ordre d'une dizaine
 d'années.
 
@@ -41,15 +41,15 @@ pour faire tourner WSL (Windows Subsystem for Linux). Celà fait remonter quelqu
 
 On constate aussi que Microsoft pousse très énergiquement les versions Cloud de ses outils (Office365), effaçant petit à petit
 la dépendance à Windows. Et c'est bien normal, Windows n'est plus l'OS majoritaire. Il le reste sur les ordinateurs personnels
-(même si MacOS X a pris une part du gateau), mais la bataille a été déja été perdue face à Linux sur les serveurs, et face à Android/iOS sur
-les devices mobiles, qui représentent aujourd'hui plus de la moitié du traffic web mondial. On peut même voir cette incitation
+(même si MacOS X a pris une part du gâteau), mais la bataille a été déjà été perdue face à Linux sur les serveurs, et face à Android/iOS sur
+les devices mobiles, qui représentent aujourd'hui plus de la moitié du trafic web mondial. On peut même voir cette incitation
 à passer à "Office cloud" comme une manière d'assurer les revenus liés à Office dans l'éventualité d'un changement d'architecture de
 Windows.
 
 En parallèle, on constate que Windows [n'a plus le vent en poupe auprès de développeurs](https://www.ginjfo.com/actualites/logiciels/linux/linux-detrone-windows-chez-les-developpeurs-20180323),
-tant au niveau des plateformes de developpement, que des OS cibles. Ne plus attirer de développeurs, ce n'est généralement pas bon
+tant au niveau des plate-formes de développement, que des OS cibles. Ne plus attirer de développeurs, ce n'est généralement pas bon
 signe sur le long terme.
 
-Bref, Microsoft a-t-il encore intéret à redoubler d'efforts pour maintenir Windows à flot face à la concurrence, alors que son
-coeur de métier est désormais dans le cloud ? Est-il temps d'intégrer le noyau Linux dans Windows pour permettre
+Bref, Microsoft a-t-il encore intérêt à redoubler d'efforts pour maintenir Windows à flot face à la concurrence, alors que son
+cœur de métier est désormais dans le cloud ? Est-il temps d'intégrer le noyau Linux dans Windows pour permettre
 de porter en douceur les outils sur cette nouvelle architecture, petit à petit ? Serait-ce déjà en cours ?
