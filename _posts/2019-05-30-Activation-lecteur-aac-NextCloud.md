@@ -5,9 +5,9 @@ tags: [Linux, Nextcloud]
 ---
 
 Une application Nextcloud permet la lecture de fichiers audio directement dans le navigateur :
-https://apps.nextcloud.com/apps/audioplayer
+[https://apps.nextcloud.com/apps/audioplayer](https://apps.nextcloud.com/apps/audioplayer)
 
-Par défaut, il ne permet pas de lire des fichiers AAC.
+Par défaut, elle ne permet pas de lire des fichiers AAC.
 
 Crée un fichier `config/mimetypemapping.json` contenant :
 
