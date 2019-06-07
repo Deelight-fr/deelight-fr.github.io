@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Echec d'installation d'un jeu Linux GOG
+title: Echec d'installation d'un jeu Linux GOG (Full Throttle Resmastered)
 tags: [Linux]
 ---
 
