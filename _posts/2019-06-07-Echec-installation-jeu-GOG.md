@@ -21,3 +21,10 @@ export TMPDIR="/autre/dossier/tmp";bash ./installer-gog.sh
 
 Pour les curieux, je m'amuse en ce moment avec la version Linux de
 [Full Throttle Resmastered](https://www.gog.com/game/full_throttle_remastered)
+
+Concernant Full Throttle spécifiquement, j'ai aussi du installer la version
+i386 de libudev1 :
+
+```bash
+sudo apt-get install libudev:i386
+```
