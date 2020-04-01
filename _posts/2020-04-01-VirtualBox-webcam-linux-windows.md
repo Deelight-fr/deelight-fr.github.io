@@ -29,7 +29,12 @@ Fichier > Paramètres > Extensions. On ajoute l'extension qui se trouve sous
 */usr/share/virtualbox-ext-pack*.
 
 Ensuite, au niveau des paramètre de notre machine virtuelle Windows, il faut
-se rendre dans la section USB et activer le contrôleur USB 2.0 (EHCI). En cliquant
-sur le bouton +, une liste des périphériques USB branchés à la machine hôte
-devrait apparaître. Il suffit de sélectionner celui correspondant à la webcam
+se rendre dans la section USB et activer le *Contrôleur USB 2.0 (EHCI)*. Si la
+webcam est branchée sur un port USB 3.0, sélectionner *Contrôleur 3.0 (xHCI)*.
+En cliquant sur le bouton +, une liste des périphériques USB branchés à la machine
+hôte devrait apparaître. Il suffit de sélectionner celui correspondant à la webcam
 et le tour est joué.
+
+Si la webcam est bien détectée par Windows mais qu'aucune image n'est visible,
+pensez à vérifier que vous avez bien sélectionné la bonne version du contrôleur
+USB.
