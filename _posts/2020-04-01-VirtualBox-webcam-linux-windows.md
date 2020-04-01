@@ -36,5 +36,4 @@ hôte devrait apparaître. Il suffit de sélectionner celui correspondant à la 
 et le tour est joué.
 
 Si la webcam est bien détectée par Windows mais qu'aucune image n'est visible,
-pensez à vérifier que vous avez bien sélectionné la bonne version du contrôleur
-USB.
+vérifier que la bonne version du contrôleur USB est sélectionnée.
