@@ -8,10 +8,11 @@ tags: [Linux, Windows, Virtualisation]
 
 La virtualisation c'est bien beau, mais les performance graphiques des VM sont
 souvent très limitées, et ne permettent pas certains usages. Dans mon cas, je
-suis à 95% sous Linux, mais il m'arrive parfois de devoir rebooter sous Windows
+suis 95% du temps sous Linux, mais il m'arrive parfois de devoir rebooter sous Windows
 pour quelques tâches très précises : traitement de photos sous Lightroom, création
-musicale (mon vieux Line6 TonePort KB37 n'est pas supporté sous Linux), et jeu
-(bien que la situtation s'est grandement améliorée sous Linux ces dernières années).
+musicale (mon vieux Line6 TonePort KB37 n'est pas supporté sous Linux), et jeu - bien
+que la situation s'est grandement améliorée de ce côté là sous Linux ces
+dernières années -.
 
 Concernant le traitement de photos et le jeu, une carte graphique est indispensable
 pour obtenir des performances correctes. C'est pour cette raison que je préfèrais
@@ -19,7 +20,7 @@ rebooter sous Windows plutôt que de passer par une VM.
 
 Une solution existe cependant : le PCI passthrough. Il permet de dédier un
 périphérique PCI (dans notre cas une carte graphique) à une VM, avec des
-performances quasiement intactes.
+performances quasiment intactes.
 
 ## Prérequis ##
 
@@ -60,7 +61,7 @@ sudo adduser $USER kvm
 
 IOMMU : Input–Output Memory Management Unit
 
-Dans `/etc/default/grub` :
+Dans **/etc/default/grub** :
 On remplace :
 ```
 GRUB_CMDLINE_LINUX=""
@@ -70,7 +71,7 @@ Par :
 GRUB_CMDLINE_LINUX="intel_iommu=on"
 ```
 
-Puis :
+Puis on met à jour grub et on reboot :
 ```bash
 sudo update-grub
 reboot
@@ -108,7 +109,7 @@ Je crée donc le fichier */etc/modprobe.d/blacklist-amdgpu.conf* contenant :
 blacklist amdgpu
 ```
 
-Nous allons aussi activer le VFIO (Virtual Function I/O) passthrough en crant le fichier
+J'active aussi le VFIO (Virtual Function I/O) passthrough en créant le fichier
 */etc/modprobe.d/vfio.conf* contenant :
 ```
 options vfio-pci ids=1002:67df,1002:aaf0
@@ -137,8 +138,8 @@ détails de la création, mais le plus important est d'ajouter à notre VM deux 
 PCI correspondant à la carte graphique (et son interface audio) que l'on souhaite
 dédier à la VM.
 
-On n'oublie pas de brancher un écran sur chaque carte graphique, et on lance
-l'installation de Windows, puis des drivers graphiques de notre carte.
+On n'oublie pas de brancher un écran sur notre carte graphique en passthrough,
+et on lance l'installation de Windows, puis des drivers graphiques de notre carte.
 
 ### Partage souris clavier entre hôte et VM ###
 
@@ -147,13 +148,13 @@ VM). On pourra ainsi passer la souris d'un écran à l'autre même lorsque les d
 écrans ne sont pas connecté au même OS. Barrier permet aussi d'effectuer des
 copier-coller entre le OS.
 
-TIP : la touche Scroll-lock (ou Vérrou défilement) de votre clavier permet de
+TIP : la touche "scroll-lock" (ou "verrou défil.") de votre clavier permet de
 verrouiller la souris à l'écran actuel. Celà vous permettra par exemple de jouer
 à des FPS sans que votre souris ne quitte malencontreusement l'écran du jeu en
 cours de partie. Dans ce contexte, il est aussi nécessaire d'activer l'option
 "mouvements de souris relatif" côté serveur Barrier pour ne pas être limité dans
-ses mouvements de souris (sinon vous aurez l'impression de buter "sur" les bords
-de l'écran).
+ses mouvements de souris (sinon vous aurez parfois l'impression de "buter" sur
+les bords de l'écran en déplaçant la souris).
 
 ## Bonus ##
 
@@ -163,9 +164,9 @@ un des écrans aux deux cartes puis de changer la source d'entrée au niveau de
 l'écran, mais celà peut nécessiter un peu de développement côté Linux pour qu'il
 désactive un des écrans lorsque l'on passe sur notre VM Windows.
 
-J'ai opté pour une solution beaucoup plus simple : un switch HDMI (ça vaut dans
-les 10€). De cette manière, lorsque je switch sur le GPU dédié à Windows, mon GPU
-Linux détecte une déconnection physique de l'écran et adapte automatiquement son
+J'ai opté pour une solution beaucoup plus simple : un [switch HDMI](https://www.amazon.fr/gp/product/B079FLNWJY/) (ça vaut dans
+les 10€). De cette manière, lorsque je switch l'entrée connectée au GPU dédié à Windows,
+mon GPU Linux détecte une déconnection physique d'un l'écran et adapte automatiquement son
 affichage (même chose à la reconnexion).
 
 ![Cablage](/images/gpu-passthrough-cablage.png "Cablage")
@@ -175,5 +176,7 @@ affichage (même chose à la reconnexion).
 ## Quelques photos ##
 
 ![Horizon](/images/gpu-passthrough-horizon.png "Horizon")
+**Horizon Zero Dawn sous Windows à gauche, Linux à droite**
 
 ![Apex](/images/gpu-passthrough-apex.png "Apex")
+**Apex Legends sous Windows à gauche, Linux à droite**
