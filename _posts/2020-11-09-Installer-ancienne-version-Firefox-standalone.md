@@ -5,8 +5,8 @@ tags: [Linux]
 ---
 
 Il est parfois nécessaire d'avoir à sa disposition une ancienne version de Firefox
-pour pouvoir administrer certains équipements dont l'interface web n'a pu être mise
-à jour.
+pour pouvoir administrer certains équipements dont l'interface web n'a pas pu être
+mise à jour (plus de support par exemple).
 
 Dans mon cas, j'avais besoin d'un Firefox <= 63.0.
 
@@ -20,18 +20,18 @@ A ce stade, je vous invite fortement a vérifier le contenu du script `download-
 que vous venez de télécharger. Executer un script inconnu téléchargé sur internet
 n'est pas du tout une bonne idée.
 
-Le deuxième arguement de ce script permet de préciser la version de Firfox que l'on
+Le deuxième argument de ce script permet de préciser la version de Firefox que l'on
 souhaite récupérer.
 
 ```bash
 sh download-mozilla-portable.sh firefox 63.0
 ```
 
-On obtient un exécutable de firefox 63.0 sous `~/Documents/mon-vieux-Firefox/firefox-portable-63.0/firefox-portable`.
+On obtient un exécutable de Firefox 63.0 sous `~/Documents/mon-vieux-Firefox/firefox-portable-63.0/firefox-portable`.
 
 Pour éviter qu'il se mette à jour automatiquement, ma technique un peu crade
-consiste à le lancer une première fois, et à le quitter quasi-immédiatement (afin
-qu'il ait le temps de créer un profil utilisateur, mais pas de se mettre à jour). 
+consiste à le lancer une première fois, et à le quitter immédiatement (afin qu'il
+ait le temps de créer un profil utilisateur, mais pas de se mettre à jour).
 
 On édite ensuite le fichier `~/Documents/mon-vieux-Firefox/firefox-portable-63.0/data/prefs.js` pour y rajouter la ligne suivante :
 
