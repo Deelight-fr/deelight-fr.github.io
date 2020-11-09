@@ -1,7 +1,7 @@
 ---
 layout: post
 title: VirtualBox Ubuntu - Faire reconnaître une webcam dans un Windows virtualisé
-tags: [Windows, Linux, VirtualBox]
+tags: [Windows, Linux, VirtualBox, Virtualisation]
 ---
 
 Il est parfois utile de permettre à un système Windows virtualisé d'accéder à la
