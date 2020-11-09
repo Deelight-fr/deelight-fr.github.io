@@ -47,8 +47,8 @@ technologies VT-x et VT-d)
 
 Dans mon cas, les deux options à
 activer se trouvent sous :
-`Advanced > System Agent Configuration > VT-d`
-`Advanced > Intel Virtualization Technology`
+- `Advanced > System Agent Configuration > VT-d`
+- `Advanced > Intel Virtualization Technology`
 
 ### Installation de packages ###
 
@@ -59,9 +59,10 @@ sudo adduser $USER kvm
 
 ### Activer l'IOMMU ###
 
-IOMMU : Input–Output Memory Management Unit
+IOMMU : Input-Output Memory Management Unit
 
-Dans **/etc/default/grub** :
+Dans */etc/default/grub* :
+
 On remplace :
 ```
 GRUB_CMDLINE_LINUX=""
@@ -148,12 +149,12 @@ VM). On pourra ainsi passer la souris d'un écran à l'autre même lorsque les d
 écrans ne sont pas connecté au même OS. Barrier permet aussi d'effectuer des
 copier-coller entre le OS.
 
-TIP : la touche "scroll-lock" (ou "verrou défil.") de votre clavier permet de
-verrouiller la souris à l'écran actuel. Celà vous permettra par exemple de jouer
-à des FPS sans que votre souris ne quitte malencontreusement l'écran du jeu en
+TIP : la touche "scroll-lock" (ou "verrou défil.") du clavier permet de
+verrouiller la souris à l'écran actuel. Celà permet par exemple de jouer
+à des FPS sans que la souris ne quitte malencontreusement l'écran du jeu en
 cours de partie. Dans ce contexte, il est aussi nécessaire d'activer l'option
 "mouvements de souris relatif" côté serveur Barrier pour ne pas être limité dans
-ses mouvements de souris (sinon vous aurez parfois l'impression de "buter" sur
+ses mouvements de souris (sinon on a parfois l'impression de "buter" sur
 les bords de l'écran en déplaçant la souris).
 
 ## Bonus ##
@@ -162,7 +163,8 @@ Je tenais à conserver le dual-screen sous Linux, mais à pouvoir dédier un de
 mes écrans à la VM Windows lorsque je le souhaitais. Il est possible de brancher
 un des écrans aux deux cartes puis de changer la source d'entrée au niveau de
 l'écran, mais celà peut nécessiter un peu de développement côté Linux pour qu'il
-désactive un des écrans lorsque l'on passe sur notre VM Windows.
+désactive un des écrans lorsque l'on passe sur notre VM Windows, et n'est pas
+forcément très érgonomique en fonction de l'écran.
 
 J'ai opté pour une solution beaucoup plus simple : un [switch HDMI](https://www.amazon.fr/gp/product/B079FLNWJY/) (ça vaut dans
 les 10€). De cette manière, lorsque je switch l'entrée connectée au GPU dédié à Windows,
@@ -176,7 +178,9 @@ affichage (même chose à la reconnexion).
 ## Quelques photos ##
 
 ![Horizon](/images/gpu-passthrough-horizon.png "Horizon")
-**Horizon Zero Dawn sous Windows à gauche, Linux à droite**
+
+*Horizon Zero Dawn sous Windows à gauche, Linux à droite*
 
 ![Apex](/images/gpu-passthrough-apex.png "Apex")
-**Apex Legends sous Windows à gauche, Linux à droite**
+
+*Apex Legends sous Windows à gauche, Linux à droite*
