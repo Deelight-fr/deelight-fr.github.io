@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Effectuer un speedtest en ligne de commande sous ligne
+title: Effectuer un speedtest en ligne de commande sous Linux
 tags: [Linux]
 ---
 
