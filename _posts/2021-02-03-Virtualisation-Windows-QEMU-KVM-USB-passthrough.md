@@ -8,7 +8,7 @@ Suite à mon [article précédent](http://blog.deelight.org/Virtualisation-Windo
 concernant la virtualisation KVM/QEMU avec GPU en passtrough, j'ai utilisé pendant plusieurs mois cette
 solution sans problème particulier.
 
-Un limitation demeurait cependant pour quelques utilisations très spécifique, et notamment la MAO (musique
+Un limitation demeurait cependant pour quelques utilisations très spécifiques, et notamment la MAO (musique
 assistée par ordinateur). Je dispose en effet d'une carte son USB externe qui, une fois partagée avec une VM,
 induisait des latences la rendant inutilisable.
 
