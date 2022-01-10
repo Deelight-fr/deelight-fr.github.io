@@ -122,7 +122,7 @@ Dernière mise à jour de grub et recontruction de l'initramfs pour prendre en
 compte ces changements :
 
 ```bash
-sudo grub-update
+sudo update-grub
 sudo update-initramfs -u
 reboot
 ```
