@@ -32,9 +32,9 @@ Me voilà donc parti pour tenter de réaliser un adaptateur maison.
 * JVGA1 pin 11 -> VGA pin 13
 * JVGA1 pin 12 -> VGA pin 14
 
-La connexion de tous les pins Ground (2, 4, 6, 7 et 9 côté JVGA1 et  5, 6, 7, 8, 10) permet d'avoir une image avec moins d'interférence. Les autres connexions sont optionnelles.
+La connexion de tous les pins Ground (2, 4, 6, 7 et 9 côté JVGA1 et  5, 6, 7, 8, 10) permet d'avoir une image avec moins d'interférences. Les autres connexions sont optionnelles.
 
-Heureusement j'avais pas mal de composants qui trainaient, notamment un PCB disposant d'un port VGA male. J'ai aussi pu utiliser un vieux connecteur mini-IDE male (anciens disque disques IDE 2'5) qui, une fois coupé, s'avère s'insérer parfaitement sur le connecteur de la carte mère. 
+Heureusement j'avais pas mal de composants qui trainaient, notamment un PCB disposant d'un port VGA male. J'ai aussi pu utiliser un vieux connecteur IDE 44 broches male (ceux qui se branchent sur les anciens disque disques IDE 2'5) qui, une fois coupé, s'avère s'insérer parfaitement sur le connecteur JVGA1 de la carte mère. 
 
 ![VHS4-VGA-Connector](/images/vhs4-jvga-connector.png "VHS4-JVGA-Connector")
 
