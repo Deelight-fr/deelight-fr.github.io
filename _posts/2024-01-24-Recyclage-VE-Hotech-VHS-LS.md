@@ -6,7 +6,7 @@ tags: [Linux, Reparation]
 
 ![VHS4](/images/vhs4.png "VHS4")
 
-Le NAS Ve-Hotech VHS4 LS est un NAS 4 baies. Il tourne sous une version modifiée d'Ubuntu, et n'offre qu'un accès limité au système à l'utilisateur (gestion via une interface web, pas d'accès SSH).
+Le NAS Ve-Hotech VHS4 LS est un NAS 4 baies. Il tourne sous une version modifiée d'Ubuntu 10.04 (obsolète depuis le 9 mai 2013), et n'offre qu'un accès limité au système à l'utilisateur (gestion via une interface web, pas d'accès SSH).
 
 La société [Ve-Hotech](https://fr.wikipedia.org/wiki/Ve-hotech) a été mise en liquidation judiciaire le 04/09/2019, ne proposant de fait plus aucune mise à jour.
 
