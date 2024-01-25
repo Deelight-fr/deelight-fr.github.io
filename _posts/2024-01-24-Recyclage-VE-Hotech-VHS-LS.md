@@ -26,11 +26,11 @@ Me voilà donc parti pour tenter de réaliser un adaptateur maison.
 
 ![VHS4-VGA](/images/vhs4-vga.png "VHS4-JVGA")
 
-JVGA1 pin 1 -> VGA pin 1
-JVGA1 pin 3 -> VGA pin 2
-JVGA1 pin 5 -> VGA pin 3
-JVGA1 pin 11 -> VGA pin 13
-JVGA1 pin 12 -> VGA pin 14
+* JVGA1 pin 1 -> VGA pin 1
+* JVGA1 pin 3 -> VGA pin 2
+* JVGA1 pin 5 -> VGA pin 3
+* JVGA1 pin 11 -> VGA pin 13
+* JVGA1 pin 12 -> VGA pin 14
 
 La connexion de tous les pins Ground (2, 4, 6, 7 et 9 côté JVGA1 et  5, 6, 7, 8, 10) permet d'avoir une image avec moins d'interférence. Les autres connexions sont optionnelles.
 
