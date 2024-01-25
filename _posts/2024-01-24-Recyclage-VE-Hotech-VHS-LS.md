@@ -38,7 +38,9 @@ Heureusement j'avais pas mal de composants qui trainaient, notamment un PCB disp
 
 ![VHS4-VGA-Connector](/images/vhs4-jvga-connector.png "VHS4-JVGA-Connector")
 
-Restait à faire les soudures, essayer de ne pas se planter dans les correspondances... et trouver moniteur disposant d'un port VGA.
+On peut sans doute trouver ce type de connecteur dans [toute bonne boutique d'électronique](https://fr.farnell.com/hirose-hrs/a3-14da-2sv-71/connecteur-rcpt-14-voies-2-rangs/dp/2724831) (rechercher embase, 14 voies, 2 rangs, pas de 2mm...).
+
+Restait à faire les soudures, essayer de ne pas se planter dans les correspondances... et trouver un moniteur disposant d'un port VGA.
 
 Au bout de plusieurs heures à essayer de trouver les bonnes correspondances, à souder, désouder, tester... une image apparaît enfin à l'écran. Les couleurs sont mauvaises, je ne sais pas s'il s'agit d'une erreur de câblage ou de mon vieil écran qui est en train de rendre l'âme, mon montage est atroce... mais peu importe, c'est utilisable et je peux accéder au BIOS en tapant sur la touche Del au démarrage.
 
