@@ -10,7 +10,7 @@ Le NAS Ve-Hotech VHS4 LS est un NAS 4 baies. Il tourne sous une version modifié
 
 La société [Ve-Hotech](https://fr.wikipedia.org/wiki/Ve-hotech) a été mise en liquidation judiciaire le 04/09/2019, ne proposant de fait plus aucune mise à jour.
 
-Du fait de leur obsolescence, on les trouve à très bas prix sur les sites de petites annonces. Mon objectif était donc de tenter d'installer un distribution Linux récente sur ce système encore tout à fait utilisable en tant que NAS.
+Du fait de l'obsolescence de leur système, on les trouve à très bas prix sur les sites de petites annonces, malgré leur hardware encore tout à fait adapté à un NAS. Mon objectif était donc de tenter d'installer une distribution Linux récente sur ce système.
 
 Probléme : le système a toute l'apparence d'une boîte noire car il n'est pas (de base) possible d'y brancher un écran pour accéder au BIOS et tenter de démarrer sur un autre disque. D'ailleurs, parlons du disque système d'origine du VHS4. Une inspection rapide de la carte mère ne permet pas de l'identifier. Pas de carte SD interne, pas de DOM (Disk on Module), pas de periphérique USB interne... Une énigme.
 
