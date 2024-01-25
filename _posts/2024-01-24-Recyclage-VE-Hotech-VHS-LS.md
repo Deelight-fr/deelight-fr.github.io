@@ -34,7 +34,11 @@ Me voilà donc parti pour tenter de réaliser un adaptateur maison.
 
 La connexion de tous les pins Ground (2, 4, 6, 7 et 9 côté JVGA1 et  5, 6, 7, 8, 10) permet d'avoir une image avec moins d'interférence. Les autres connexions sont optionnelles.
 
-Heureusement j'avais pas mal de composants qui trainaient, notamment un PCB disposant d'un port VGA male. J'ai aussi pu utiliser un vieux connecteur mini-IDE male (anciens disque disques IDE 2'5) qui, une fois coupé, s'avère s'insérer parfaitement sur le connecteur de la carte mère. Restait à faire les soudures, essayer de ne pas se planter dans les correspondances... et trouver moniteur disposant d'un port VGA.
+Heureusement j'avais pas mal de composants qui trainaient, notamment un PCB disposant d'un port VGA male. J'ai aussi pu utiliser un vieux connecteur mini-IDE male (anciens disque disques IDE 2'5) qui, une fois coupé, s'avère s'insérer parfaitement sur le connecteur de la carte mère. 
+
+![VHS4-VGA-Connector](/images/vhs4-jvga-connector.png "VHS4-JVGA-Connector")
+
+Restait à faire les soudures, essayer de ne pas se planter dans les correspondances... et trouver moniteur disposant d'un port VGA.
 
 Au bout de plusieurs heures à essayer de trouver les bonnes correspondances, à souder, désouder, tester... une image apparaît enfin à l'écran. Les couleurs sont mauvaises, je ne sais pas s'il s'agit d'une erreur de câblage ou de mon vieil écran qui est en train de rendre l'âme, mon montage est atroce... mais peu importe, c'est utilisable et je peux accéder au BIOS en tapant sur la touche Del au démarrage.
 
