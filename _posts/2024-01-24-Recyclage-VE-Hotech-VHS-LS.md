@@ -51,6 +51,6 @@ Je découvre ainsi qu'il y a bien, quelque part dans le boîtier, un disque USB 
 
 J'installe donc l'ISO d'installation de la dernière version d'OpenMediaVault sur ma clé, je fouille dans mes tiroirs pour trouver une autre clé USB, la plus petite possible (en dimensions), qui va devenir de nouveau disque système du NAS, branchée en permanence à l'arrière du boîtier. Je préfère ne pas altérer la partition de 4 Go d'origine du NAS, mais c'est un choix personnel, pour pouvoir éventuellement remettre le NAS dans son état (obsolète) d'origine.
 
-![VHS4-Screenshot](/images/vhs4-screenshot.png "VHS4-Screenshot")
+![VHS4-Screenshot](/images/vhs4-screenshot-new.jpg "VHS4-Screenshot")
 
 A suivre...
