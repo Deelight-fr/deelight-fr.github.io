@@ -20,6 +20,15 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*b**y****wwwwwwwww**oooo**o**
 </script>
 </div>
 
+### Bascule vers la droite
+
+**Algorithme : <span style="color: red">U R U' R' U' F' U F</span>**
+
+<div style="width: 100%, max-width: 500px; height: 500px"><script>
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*g**y****wwwwwwwww**oooo**o**r*rr**r****b*bbb**g*gg**g&position=lluu&move=U R U' R' U' F' U F&speed=20");
+</script>
+</div>
+
 ### Note
 
 Il est aussi possible d'utiliser ces algorithmes pour remplacer une pièce mal placée sur le second étage.
