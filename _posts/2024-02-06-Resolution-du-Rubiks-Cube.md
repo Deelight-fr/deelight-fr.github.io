@@ -12,7 +12,7 @@ Nous devons à présent apprendre nos premiers algorithmes. Le premier nous perm
 
 ### Bascule vers la gauche
 
-**Algorithme : U' L' U L U F U' F'**
+**Algorithme : <span style="color: red">U' L' U L U F U' F'</span>**
 
 <div style="width: 100%, max-width: 500px; height: 500px">
 <script>
