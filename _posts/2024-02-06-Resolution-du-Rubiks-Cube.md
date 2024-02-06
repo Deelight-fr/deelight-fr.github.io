@@ -14,7 +14,7 @@ Nous devons à présent apprendre nos premiers algorithmes. Le premier nous perm
 
 **Algorithme : U' L' U L U F U' F'**
 
-<div style="width: 500px; height: 500px">
+<div style="width: 100%, max-width: 500px; height: 500px">
 <script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*b**y****wwwwwwwww**oooo**o**r*rr**r****b*bbb**g*gg**g&position=lldd&move=U' L' U L U F U' F'&speed=20");
 </script>
