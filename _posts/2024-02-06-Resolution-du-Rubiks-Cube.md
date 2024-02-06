@@ -6,7 +6,7 @@ tags: [Rubik's Cube]
 
 <script src="/js/AnimCube3.js"></script>
 
-## Résolution du la deuxième étage
+## Résolution du deuxième étage
 
 Nous devons à présent apprendre nos premiers algorithmes. Le premier nous permettra de basculer la pièce centrale de l'étage supérieur de 90° vers la gauche (sur le second étage, donc), le second nous permettra de faire de même vers la droite.
 
