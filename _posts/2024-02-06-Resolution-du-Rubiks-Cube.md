@@ -33,7 +33,7 @@ Quand une apostrophe (**'**) suit une lettre, celà signifie que la rotation doi
 
 Cette étape ne devrait pas vous poser trop de problème. Il est surtout important que chaque bordure de la croix ait la couleur correspondant à la pièce centrale de chaque face.
 
-<div style="width: 100%, max-width: 500px; height: 500px">
+<div style="width: 100%, max-width: 500px; height: 500px: margin: 0px 20px 0px 10px;">
 <script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*w*www*w*************oo*******rr*****b**b*******gg****&position=lluu&hint=10&scale=3");
 </script>
