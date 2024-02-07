@@ -41,7 +41,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*w*www*w*************oo******
 
 ## Etape 2 : La face blanche et le premier étage
 
-La encore, cette face peut être résolue avec des mouvements simple que je ne présenterai pas en détail.
+La encore, cette face peut être résolue avec des mouvements simples que je ne présenterai pas en détail.
 
 <div style="width: 100%, max-width: 500px; height: 500px">
 <script>
@@ -59,7 +59,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=wwwwwwwww*********o**oo*o**r*
 
 ## Etape 4 : Résolution du deuxième étage
 
-Nous devons à présent apprendre nos premiers algorithmes. Le premier nous permettra de basculer la bordure de l'étage supérieur de 90° vers la gauche (sur le second étage, donc), le second nous permettra de faire de même vers la droite. On va donc tourner la face supérieur du cube pour être dans l'un des dexu cas suivants.
+Nous devons à présent apprendre nos premiers algorithmes. Le premier nous permettra de basculer la bordure de l'étage supérieur de 90° vers la gauche (sur le second étage, donc), le second nous permettra de faire de même vers la droite. On va donc tourner la face supérieur du cube pour être dans l'un des deux cas suivants.
 
 ### Bascule vers la gauche
 
@@ -151,7 +151,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yyyyyyyyywwwwwwwwwrrr*rrorrgo
 
 La dernière étape consiste à placer correctement le bordures du dernier étage. Si vous avez déjà une face terminée, vous n'êtes plus qu'à un algorithme de la résolution. Sinon, appliquez une des deux algorithmes suivants, et répétez cette étape.
 
-Les deux algorithmes nous permettent de permuter les trois bordures des faces gauche, avant et droite. L'un permet de les faire tourner dans le sens des aiguilles d'une montre, et l'autre l'inverse. Notez qu'appliquer deux fois de suite le même algorithme revient au même qu'appliquer l'autre. On peut ainsi éviter d'apprendre les deux.
+Les deux algorithmes nous permettent de permuter les trois bordures des faces gauche, avant et droite. L'un permet de les faire tourner dans le sens des aiguilles d'une montre, et l'autre en sens inverse. Notez qu'appliquer deux fois de suite le même algorithme revient au même qu'appliquer l'autre. On peut ainsi éviter d'apprendre les deux.
 
 ### Rotation anti-horaire
 
@@ -199,3 +199,7 @@ A l'étape 2, l'algorithme du "crocket jaune" devient : **F + "Inverse Sexy move
 Celui de la barre horizontale devient : **F + "Sexy move" + F'**
 
 Si vous connaissez d'autres moyen mnémotechniques, n'hésitez pas à les partager en commentaires !
+
+## Annexes
+
+Les cubes 3D de cet article ont été générés grâce à [AnimCubeJS](https://animcubejs.cubing.net/animcubejs.html) 
