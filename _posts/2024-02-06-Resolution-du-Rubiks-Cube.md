@@ -67,7 +67,7 @@ Nous devons à présent apprendre nos premiers algorithmes. Le premier nous perm
 
 <div style="width: 100%, max-width: 500px; height: 500px">
 <script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*g**y****wwwwwwwww**oooo**o**r*rr**r****g*ggg**b*bb**b&position=lldd&move=U' L' U L U F U' F'&speed=20&movetext=5&fonttype=0&textsize=20");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*g**y****wwwwwwwww**oooo**o**r*rr**r****g*ggg**b*bb**b&position=lldd&move=U' L' U L U F U' F'&speed=20&movetext=5&fonttype=1&textsize=20");
 </script>
 </div>
 
@@ -76,7 +76,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*g**y****wwwwwwwww**oooo**o**
 **Algorithme : <span style="color: red">U R U' R' U' F' U F</span>**
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*b**y****wwwwwwwww**oooo**o**r*rr**r****g*ggg**b*bb**b&position=lluu&move=U R U' R' U' F' U F&speed=20&movetext=5&fonttype=0&textsize=20");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*b**y****wwwwwwwww**oooo**o**r*rr**r****g*ggg**b*bb**b&position=lluu&move=U R U' R' U' F' U F&speed=20&movetext=5&fonttype=1&textsize=20");
 </script>
 </div>
 
@@ -93,7 +93,7 @@ Si vous avez un "crochet jaune" (trois cases jaunes entourant un coin) sur la fa
 **Algorithme : <span style="color: red">F U R U' R' F'</span>**
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=***yy**y*wwwwwwwww*ooyoo*oo*rr*rr*rr***gggggg*bbybb*bb&position=lluu&move=F U R U' R' F'&speed=20&movetext=5&fonttype=0&textsize=20");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=***yy**y*wwwwwwwww*ooyoo*oo*rr*rr*rr***gggggg*bbybb*bb&position=lluu&move=F U R U' R' F'&speed=20&movetext=5&fonttype=1&textsize=20");
 </script>
 </div>
 
@@ -104,7 +104,7 @@ Si vous avez une "barre jaune" (trois cases jaunes alignées, dont le centre) su
 **Algorithme : <span style="color: red">F R U R' U' F'</span>**
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=***yyy***wwwwwwwww*ooyoo*oo*rryrr*rr***gggggg*bb*bb*bb&position=lluu&move=F R U R' U' F'&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=***yyy***wwwwwwwww*ooyoo*oo*rryrr*rr***gggggg*bb*bb*bb&position=lluu&move=F R U R' U' F'&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
 
@@ -123,7 +123,7 @@ A cette étape, un seul algorithme est nécessaire (le "Sune"), mais nous allons
 Orientez la face supérieur de manière à ce que le "poisson jaune" pointe vers le coin inférieur gauche. Si vous avez une case jaune face à vous, sur le côté droit du dernier étage, la face jaune devrait être résolue après l'exécution du "corner flipper". Sinon, orientez la face supérieure pour avoir une case jaune face à vous, sur le côté gauche ou droit du dernier étage et exécute l'algorithme. Répétez ensuite l'étape 6.
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yy*yyy*y*wwwwwwwww*oo*ooyoo*rr*rryrr***gggggg*bb*bbybb&position=lluu&move=R U R' U R U U R'&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yy*yyy*y*wwwwwwwww*oo*ooyoo*rr*rryrr***gggggg*bb*bbybb&position=lluu&move=R U R' U R U U R'&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
 
@@ -132,7 +132,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yy*yyy*y*wwwwwwwww*oo*ooyoo*r
 Si vous n'avez qu'une croix jaune sur la face supérieure, orientez cette dernière de manière à avoir une case jaune face à vous, sur le côté droit du dernier étage. Répétez ensuite l'étape 6.
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*yyy*y*wwwwwwwww*oo*ooyoo*rr*rr*rr***gggggg*bb*bb*bb&position=lluu&move=R U R' U R U U R'&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*yyy*y*wwwwwwwww*oo*ooyoo*rr*rr*rr***gggggg*bb*bb*bb&position=lluu&move=R U R' U R U U R'&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
 
@@ -143,7 +143,7 @@ Si vous avez de la chance, les coins sont bien placés et vous pouvez passer à 
 **Algorithme "corner switch" : <span style="color: red">R' F R' B B R F' R' B B R R</span>**
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yyyyyyyyywwwwwwwwwrrr*rrorrgoo*oogoob*obbbbbbbgg*ggrgg&position=lluu&move=R' F R' B B R F' R' B B R R&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yyyyyyyyywwwwwwwwwrrr*rrorrgoo*oogoob*obbbbbbbgg*ggrgg&position=lluu&move=R' F R' B B R F' R' B B R R&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
 
@@ -158,7 +158,7 @@ Les deux algorithmes nous permettent de permuter les trois bordures des faces ga
 **Algorithme : <span style="color: red">R U' R U R U R U' R' U' R R</span>**
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o***************r**********b*****&position=lluu&move=R U' R U R U R U' R' U' R R&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o***************r**********b*****&position=lluu&move=R U' R U R U R U' R' U' R R&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
 
@@ -167,7 +167,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o*******
 **Algorithme : <span style="color: red">R R U R U R' U' R' U' R' U R'</span>**
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o***************r**********b*****&position=lluu&move=R R U R U R' U' R' U' R' U R'&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o***************r**********b*****&position=lluu&move=R R U R U R' U' R' U' R' U R'&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
 
@@ -182,14 +182,14 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&position=lluu");
 
 Mémoriser les algorithmes peut sembler difficile. Le meilleur moyen d'y parvenir et d'inventer des moyens mnemotechniques, basés sur les mouvements à effectuer, ou sur la notation Singmaster.
 
-Il est aussi possible de décomposer les algorithmes en groupes d'opérations. Voici quelques enchaînements fréquents, et leur appelantion commune :
+Il est aussi possible de décomposer les algorithmes en groupes d'opérations. Voici quelques enchaînements fréquents, et leur appelation commune :
 
 - "Sexy move" : **R U R' U'**
 - "Inverse Sexy move" : **U R U' R'**
 - "Left Sexy move" : **L' U' L U**
 - "Inverse Left Sexy move": **U' L' U L**
 
-A l'étape 4, on peut ainsi placer le cube de profil (et considérer qu'il n'y a plus de face "avant") et appliquer ces algorithmes :
+A l'étape 4, on peut ainsi placer le cube de trois-quarts (et considérer qu'il n'y a plus de face "avant") et appliquer ces algorithmes :
 
 - Bascule vers la gauche : "Inverse Left Sexy move" + "Inverse Sexy move"
 - Bascule vers la droite : "Inverse Sexy move" + "Inverse Left Sexy move"
@@ -197,3 +197,5 @@ A l'étape 4, on peut ainsi placer le cube de profil (et considérer qu'il n'y a
 A l'étape 2, l'algorithme du "crocket jaune" devient : **F + "Inverse Sexy move" + F'**
 
 Celui de la barre horizontale devient : **F + "Sexy move" + F'**
+
+Si vous connaissez d'autres moyen mnémotechniques, n'hésitez pas à les partager en commentaires !
