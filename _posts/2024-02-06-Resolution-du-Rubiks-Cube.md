@@ -43,7 +43,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*w*www*w*************oo******
 
 La encore, cette face peut être résolue avec des mouvements simples que je ne présenterai pas en détail.
 
-<div style="width: 100%, max-width: 500px; height: 500px">
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;">
 <script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=wwwwwwwww*********o**oo*o**r**rr*r**bbb*b****g**gg*g**&position=lluu&hint=10&scale=3");
 </script>
@@ -51,7 +51,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=wwwwwwwww*********o**oo*o**r*
 
 ## Etape 3 : On retourne le cube
 
-<div style="width: 100%, max-width: 500px; height: 500px">
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;">
 <script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=wwwwwwwww*********o**oo*o**r**rr*r**bbb*b****g**gg*g**&position=lllllllllllllluuuuuuuu&hint=10&scale=3");
 </script>
@@ -65,7 +65,7 @@ Nous devons à présent apprendre nos premiers algorithmes. Le premier nous perm
 
 **Algorithme : <span style="color: red">U' L' U L U F U' F'</span>**
 
-<div style="width: 100%, max-width: 500px; height: 500px">
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;">
 <script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*g**y****wwwwwwwww**oooo**o**r*rr**r****g*ggg**b*bb**b&position=lldd&move=U' L' U L U F U' F'&speed=20&movetext=5&fonttype=1&textsize=20");
 </script>
@@ -75,7 +75,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*g**y****wwwwwwwww**oooo**o**
 
 **Algorithme : <span style="color: red">U R U' R' U' F' U F</span>**
 
-<div style="width: 100%, max-width: 500px; height: 500px"><script>
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*b**y****wwwwwwwww**oooo**o**r*rr**r****g*ggg**b*bb**b&position=lluu&move=U R U' R' U' F' U F&speed=20&movetext=5&fonttype=1&textsize=20");
 </script>
 </div>
@@ -92,7 +92,7 @@ Si vous avez un "crochet jaune" (trois cases jaunes entourant un coin) sur la fa
 
 **Algorithme : <span style="color: red">F U R U' R' F'</span>**
 
-<div style="width: 100%, max-width: 500px; height: 500px"><script>
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=***yy**y*wwwwwwwww*ooyoo*oo*rr*rr*rr***gggggg*bbybb*bb&position=lluu&move=F U R U' R' F'&speed=20&movetext=5&fonttype=1&textsize=20");
 </script>
 </div>
@@ -103,7 +103,7 @@ Si vous avez une "barre jaune" (trois cases jaunes alignées, dont le centre) su
 
 **Algorithme : <span style="color: red">F R U R' U' F'</span>**
 
-<div style="width: 100%, max-width: 500px; height: 500px"><script>
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=***yyy***wwwwwwwww*ooyoo*oo*rryrr*rr***gggggg*bb*bb*bb&position=lluu&move=F R U R' U' F'&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
@@ -122,7 +122,7 @@ A cette étape, un seul algorithme est nécessaire (le "Sune"), mais nous allons
 
 Orientez la face supérieur de manière à ce que le "poisson jaune" pointe vers le coin inférieur gauche. Si vous avez une case jaune face à vous, sur le côté droit du dernier étage, la face jaune devrait être résolue après l'exécution du "corner flipper". Sinon, orientez la face supérieure pour avoir une case jaune face à vous, sur le côté gauche ou droit du dernier étage et exécute l'algorithme. Répétez ensuite l'étape 6.
 
-<div style="width: 100%, max-width: 500px; height: 500px"><script>
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yy*yyy*y*wwwwwwwww*oo*ooyoo*rr*rryrr***gggggg*bb*bbybb&position=lluu&move=R U R' U R U U R'&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
@@ -131,7 +131,7 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yy*yyy*y*wwwwwwwww*oo*ooyoo*r
 
 Si vous n'avez qu'une croix jaune sur la face supérieure, orientez cette dernière de manière à avoir une case jaune face à vous, sur le côté droit du dernier étage. Répétez ensuite l'étape 6.
 
-<div style="width: 100%, max-width: 500px; height: 500px"><script>
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*yyy*y*wwwwwwwww*oo*ooyoo*rr*rr*rr***gggggg*bb*bb*bb&position=lluu&move=R U R' U R U U R'&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
@@ -142,7 +142,7 @@ Si vous avez de la chance, les coins sont bien placés et vous pouvez passer à 
 
 **Algorithme "corner switch" : <span style="color: red">R' F R' B B R F' R' B B R R</span>**
 
-<div style="width: 100%, max-width: 500px; height: 500px"><script>
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yyyyyyyyywwwwwwwwwrrr*rrorrgoo*oogoob*obbbbbbbgg*ggrgg&position=lluu&move=R' F R' B B R F' R' B B R R&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
@@ -157,7 +157,7 @@ Les deux algorithmes nous permettent de permuter les trois bordures des faces ga
 
 **Algorithme : <span style="color: red">R U' R U R U R U' R' U' R R</span>**
 
-<div style="width: 100%, max-width: 500px; height: 500px"><script>
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o***************r**********b*****&position=lluu&move=R U' R U R U R U' R' U' R R&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
@@ -166,14 +166,14 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o*******
 
 **Algorithme : <span style="color: red">R R U R U R' U' R' U' R' U R'</span>**
 
-<div style="width: 100%, max-width: 500px; height: 500px"><script>
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o***************r**********b*****&position=lluu&move=R R U R U R' U' R' U' R' U R'&speed=20&movetext=5&fonttype=1&textsize=20&hint=10&scale=3");
 </script>
 </div>
 
-### Etape 9 : Admirez votre oeuvre, améliorez-vous, et retrouvez une vie normale !
+### Etape 9 : Admirez votre oeuvre, améliorez-vous, et reprenez une vie normale !
 
-<div style="width: 100%, max-width: 500px; height: 500px"><script>
+<div style="width: 100%, max-width: 500px; height: 500px; margin: 0px 5% 0px 5%;"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&position=lluu");
 </script>
 </div>
