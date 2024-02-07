@@ -25,7 +25,7 @@ J'utiliserai la notation "Singmaster" (créée par [David Singmaster](https://fr
 - **L** (Left) : la face de gauche
 - **R** (Right) : la face de droite
 
-Lorsqu'on effectuera une suite de mouvements, il faudra bien veiller à garder la même face du cube face à soi.
+Lorsqu'on effectuera une suite de mouvements, il faudra bien veiller à conserver l'orientation globale du cube.
 
 Quand une apostrophe (**'**) suit une lettre, celà signifie que la rotation doit être éffectuée dans le sens inverse des aiguilles d'une montre. Par exemple, **L** signifie qu'il faut faire tourner la face de gauche dans le sens des aiguilles d'une montre, **L'** indique la rotation inverse. Attention, il est facile de se tromper de sens, surtout quand on débute.
 
@@ -88,12 +88,12 @@ S'il n'y a plus de bordure disponible sur l'étage supérieur, on peut utiliser 
 
 ### Cas du "crochet jaune"
 
-Si vous avez un "crochet jaune" (trois cases jaunes entourant un coin) sur la face du dessus, et éventuellement des cases jaunes supplémentaires, placez le au fond à droite et appliquez l'algorithme suivant.
+Si vous avez un "crochet jaune" (trois cases jaunes entourant un coin) sur la face du dessus, et éventuellement des cases jaunes supplémentaires, placez le au fond à gauche et appliquez l'algorithme suivant.
 
 **Algorithme : <span style="color: red">F U R U' R' F'</span>**
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
-AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=***yy**y*wwwwwwwww*ooyoo*oo*rr*rr*rr***gggggg*bbybb*bb&position=lluu&move=F U R U' R' F'&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=***yy**y*wwwwwwwww*ooyoo*oo*rr*rr*rr***gggggg*bbybb*bb&position=lluu&move=F U R U' R' F'&speed=20&movetext=5&fonttype=0&textsize=20");
 </script>
 </div>
 
@@ -114,13 +114,13 @@ Si vous n'êtes dans aucun de ces deux cas, appliquez un des deux algorithmes et
 
 ## Etape 6 : Terminer la face jaune
 
-A cette étape, un seul algorithme est nécessaire (le "corner flipper"), mais nous allons orienter la face supérieure en fonction du motif que forment ses cases jaunes. On devra répéter cette étape autant que nécessaire (parfois 5 ou 6 fois dans les pire cas !).
+A cette étape, un seul algorithme est nécessaire (le "Sune"), mais nous allons orienter la face supérieure en fonction du motif que forment ses cases jaunes. On devra répéter cette étape autant que nécessaire (parfois 5 ou 6 fois dans les pire cas !).
 
-**Algorithme "corner flipper" : <span style="color: red">R U R' U R U U R'</span>**
+**Algorithme "Sune" : <span style="color: red">R U R' U R U U R'</span>**
 
 ### Cas du "poisson jaune"
 
-Orientez la face supérieur de manière à ce que le "poisson jaune" pointe vers le coin inférieur gauche. Si vous avez une case jaune face à vous, sur le côté droit du dernier étage, la face jaune devrait être résolue après l'exécution du "corner flipper". Sinon, orientez la face supérieure pour avoir une case jaune face à vous, sur le côté gauche ou droit du dernier étage. Vous devrez ensuite répéter cette étape autant que nécessaire.
+Orientez la face supérieur de manière à ce que le "poisson jaune" pointe vers le coin inférieur gauche. Si vous avez une case jaune face à vous, sur le côté droit du dernier étage, la face jaune devrait être résolue après l'exécution du "corner flipper". Sinon, orientez la face supérieure pour avoir une case jaune face à vous, sur le côté gauche ou droit du dernier étage et exécute l'algorithme. Répétez ensuite l'étape 6.
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yy*yyy*y*wwwwwwwww*oo*ooyoo*rr*rryrr***gggggg*bb*bbybb&position=lluu&move=R U R' U R U U R'&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
@@ -129,11 +129,71 @@ AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yy*yyy*y*wwwwwwwww*oo*ooyoo*r
 
 ### Cas de la "croix jaune"
 
-Si vous n'avez qu'une croix jaune sur la face supérieure, orientez cette dernière de manière à avoir une case jaune face à vous, sur le côté droit du dernier étage.
+Si vous n'avez qu'une croix jaune sur la face supérieure, orientez cette dernière de manière à avoir une case jaune face à vous, sur le côté droit du dernier étage. Répétez ensuite l'étape 6.
 
 <div style="width: 100%, max-width: 500px; height: 500px"><script>
 AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*yyy*y*wwwwwwwww*oo*ooyoo*rr*rr*rr***gggggg*bb*bb*bb&position=lluu&move=R U R' U R U U R'&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
 </script>
 </div>
 
+## Etape 7 : Placer les boins coins
 
+Si vous avez de la chance, les coins sont bien placés et vous pouvez passer à l'étape 8. Sinon, essayez de trouver une face du dernier étage ayant deux coins de la même couleur, et placez-là à l'arrière. S'il n'y en a pas, exécutez l'algorithme suivant et répétez cette étape.
+
+**Algorithme "corner switch" : <span style="color: red">R' F R' B B R F' R' B B R R</span>**
+
+<div style="width: 100%, max-width: 500px; height: 500px"><script>
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=yyyyyyyyywwwwwwwwwrrr*rrorrgoo*oogoob*obbbbbbbgg*ggrgg&position=lluu&move=R' F R' B B R F' R' B B R R&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+</script>
+</div>
+
+## Etape 8 : Finir la dernière face
+
+La dernière étape consiste à placer correctement le bordures du dernier étage. Si vous avez déjà une face terminée, vous n'êtes plus qu'à un algorithme de la résolution. Sinon, appliquez une des deux algorithmes suivants, et répétez cette étape.
+
+Les deux algorithmes nous permettent de permuter les trois bordures des faces gauche, avant et droite. L'un permet de les faire tourner dans le sens des aiguilles d'une montre, et l'autre l'inverse. Notez qu'appliquer deux fois de suite le même algorithme revient au même qu'appliquer l'autre. On peut ainsi éviter d'apprendre les deux.
+
+### Rotation anti-horaire
+
+**Algorithme : <span style="color: red">R U' R U R U R U' R' U' R R</span>**
+
+<div style="width: 100%, max-width: 500px; height: 500px"><script>
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o***************r**********b*****&position=lluu&move=R U' R U R U R U' R' U' R R&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+</script>
+</div>
+
+### Rotation horaire
+
+**Algorithme : <span style="color: red">R R U R U R' U' R' U' R' U R'</span>**
+
+<div style="width: 100%, max-width: 500px; height: 500px"><script>
+AnimCube3("bgcolor=ffffff&buttonheight=25&facelets=*y*y*y***wwwwwwwww***o***************r**********b*****&position=lluu&move=R R U R U R' U' R' U' R' U R'&speed=20&movetext=5&fonttype=0&textsize=20&hint=10&scale=3");
+</script>
+</div>
+
+### Etape 9 : Admirez votre oeuvre, améliorez-vous, et retrouvez une vie normale !
+
+<div style="width: 100%, max-width: 500px; height: 500px"><script>
+AnimCube3("bgcolor=ffffff&buttonheight=25&position=lluu");
+</script>
+</div>
+
+## Conclusion
+
+Mémoriser les algorithmes peut sembler difficile. Le meilleur moyen d'y parvenir et d'inventer des moyens mnemotechniques, basés sur les mouvements à effectuer, ou sur la notation Singmaster.
+
+Il est aussi possible de décomposer les algorithmes en groupes d'opérations. Voici quelques enchaînements fréquents, et leur appelantion commune :
+
+- "Sexy move" : **R U R' U'**
+- "Inverse Sexy move" : **U R U' R'**
+- "Left Sexy move" : **L' U' L U**
+- "Inverse Left Sexy move": **U' L' U L**
+
+A l'étape 4, on peut ainsi placer le cube de profil (et considérer qu'il n'y a plus de face "avant") et appliquer ces algorithmes :
+
+- Bascule vers la gauche : "Inverse Left Sexy move" + "Inverse Sexy move"
+- Bascule vers la droite : "Inverse Sexy move" + "Inverse Left Sexy move"
+
+A l'étape 2, l'algorithme du "crocket jaune" devient : **F + "Inverse Sexy move" + F'**
+
+Celui de la barre horizontale devient : **F + "Sexy move" + F'**
