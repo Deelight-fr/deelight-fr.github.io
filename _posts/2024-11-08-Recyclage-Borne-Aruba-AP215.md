@@ -60,7 +60,7 @@ Verifying flash... 14603004 bytes were the same
 Upgrade successful.
 ```
 
-On identitife le numéro de la partition de boot (normalement 0).
+On identifie le numéro de la partition de boot (normalement 0).
 
 ```bash
 apboot> osinfo
@@ -85,11 +85,11 @@ apboot> reset
 
 ## Paramétrage de la borne via l'interface web
 
-Se connecter à https://192.168.0.20 (il faudra sans doute accepter le certificat autosigné).
+Se connecter à https://192.168.0.20 (il faudra sans doute accepter le certificat auto-signé).
 
 Les identifiant de connexion par défaut sont :
 * identifiant : admin
-* mot de passe : numero de série de la borne
+* mot de passe : numéro de série de la borne
 
 L'interface vous proposera immédiatement de choisir un nouveau mot de passe, et vous aurez accès à la configuration de votre borne.
 
