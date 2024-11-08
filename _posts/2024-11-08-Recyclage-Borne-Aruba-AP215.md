@@ -12,13 +12,13 @@ Pour passer dans ce mode, on va devoir flasher l'OS de la borne.
 
 ## Prérequis
 
-- Pouvoir alimenter la borne AP-215, soit via un connexion POE si votre infrastructure le supporte, soit via un bloc d'alimentation dédié (12V / 1,5A).
+- Pouvoir alimenter la borne AP-215, soit via un connexion POE si votre switch le supporte, soit via un bloc d'alimentation dédié (12V / 1,5A).
 - Un câble de console USB -> RJ45 (RS232), ou USB -> DB9 -> RJ45
 - Récupérer la dernière version d'Aruba Instant AOS compatible avec la borne ([8.6.0.25](https://networkingsupport.hpe.com/downloads/software/RmlsZTpmNDQwOThmYS00ZjY1LTExZWYtOTdlNC00MzQ0NTRhNTcxNDQ%3D)). Nécessite un compte support.
 
-## Mise en place d'un seveur TFTP
+## Mise en place d'un serveur TFTP
 
-On crée un serveur TFTP sur notre réseau (par exemple avec Open TFTP Server), et on place à la racine le fichier ArubaInstant_Centaurus_8.6.0.25_90367.
+On crée un serveur TFTP sur notre réseau (par exemple tftpd sous Linux ou avec Open TFTP Server sous Windows), et on place à la racine le fichier ArubaInstant_Centaurus_8.6.0.25_90367.
 
 ## Flashage de la borne
 
@@ -85,11 +85,11 @@ apboot> reset
 
 ## Paramétrage de la borne via l'interface web
 
-Se connecter à https://ip_de_la_borne
+Se connecter à https://192.168.0.20 (il faudra sans doute accepter le certificat autosigné).
 
-Les identifiant de connexion part défaut sont :
+Les identifiant de connexion par défaut sont :
 * identifiant : admin
-* mot de passe : <numero de série de la borne>
+* mot de passe : numero de série de la borne
 
 L'interface vous proposera immédiatement de choisir un nouveau mot de passe, et vous aurez accès à la configuration de votre borne.
 
