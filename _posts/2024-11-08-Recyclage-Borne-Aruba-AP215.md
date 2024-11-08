@@ -99,3 +99,4 @@ L'interface vous proposera immédiatement de choisir un nouveau mot de passe, et
 
 * [Reddit - AP Convert command in 8.6 lets you convert Campus APs (215, 225, 315, etc..) to IAP](https://www.reddit.com/r/ArubaNetworks/comments/grunb4/comment/g6p7z2j/)
 * [acmxguy - Aruba Instant – AP boot image upgrade](https://acmxguy.wordpress.com/2020/05/06/aruba-iap-ap-boot-image-upgrade/)
+* [ArubaNetworks - Guide d’installation (PDF)](https://www.arubanetworks.com/techdocs/hardware/aps/ap210/ig/AP210%20Series%20IG%20Rev%2001_FR.pdf)
