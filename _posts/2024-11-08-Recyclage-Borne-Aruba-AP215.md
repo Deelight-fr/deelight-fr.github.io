@@ -85,9 +85,9 @@ apboot> reset
 
 ## Paramétrage de la borne via l'interface web
 
-Se connecter à https://192.168.0.20 (il faudra sans doute accepter le certificat auto-signé).
+Se connecter à https://192.168.0.20 (l'IP de votre borne ; il faudra sans doute accepter le certificat auto-signé).
 
-Les identifiant de connexion par défaut sont :
+Les identifiants de connexion par défaut sont :
 * identifiant : admin
 * mot de passe : numéro de série de la borne
 
