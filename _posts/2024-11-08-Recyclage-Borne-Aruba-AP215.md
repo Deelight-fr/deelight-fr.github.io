@@ -18,13 +18,13 @@ Pour passer dans ce mode, on va devoir flasher l'OS de la borne.
 
 ## Mise en place d'un serveur TFTP
 
-On crée un serveur TFTP sur notre réseau (par exemple tftpd sous Linux ou avec Open TFTP Server sous Windows), et on place à la racine le fichier ArubaInstant_Centaurus_8.6.0.25_90367.
+On crée un serveur TFTP sur notre réseau (par exemple tftpd-hpa sous Linux ou avec Open TFTP Server sous Windows), et on place à la racine le fichier ArubaInstant_Centaurus_8.6.0.25_90367.
 
 ## Flashage de la borne
 
 ![Aruba AP215 Back](/images/aruba-ap215-back.jpg "Aruba AP215 Back")
 
-On connecte tout d'abord le câble console au port "CONSOLE" de la borne et on ouvre une connexion série. On peut ensuite connecter la borne au réseau (et l'alimenter).
+On connecte tout d'abord le câble console au port "CONSOLE" de la borne et on ouvre une connexion série (par exemple avec gtkterm sous Linux, sur le port /Dev/ttyUSB0). On peut ensuite connecter la borne au réseau (et l'alimenter).
 
 On doit voir défiler les logs de démarrage sur la connexion série.
 
