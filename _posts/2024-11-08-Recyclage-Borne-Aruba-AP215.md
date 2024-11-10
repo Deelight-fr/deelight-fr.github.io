@@ -24,7 +24,7 @@ On crée un serveur TFTP sur notre réseau (par exemple tftpd-hpa sous Linux ou 
 
 ![Aruba AP215 Back](/images/aruba-ap215-back.jpg "Aruba AP215 Back")
 
-On connecte tout d'abord le câble console au port "CONSOLE" de la borne et on ouvre une connexion série (par exemple avec gtkterm sous Linux, sur le port /Dev/ttyUSB0). On peut ensuite connecter la borne au réseau (et l'alimenter).
+On connecte tout d'abord le câble console au port "CONSOLE" de la borne et on ouvre une connexion série (par exemple avec gtkterm sous Linux, sur le port /dev/ttyUSB0). On peut ensuite connecter la borne au réseau (et l'alimenter).
 
 On doit voir défiler les logs de démarrage sur la connexion série.
 
