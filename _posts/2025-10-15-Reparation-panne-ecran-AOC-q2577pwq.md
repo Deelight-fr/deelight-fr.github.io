@@ -19,4 +19,4 @@ Après démontage et inspection visuelle, une cause probable était visible sur 
 
 Après remplacement des deux condensateurs gonflés (environ 1,50€), l'écran fonctionne à nouveau correctement.
 
-Prévoir aussi du [ruban adhésif thermique](https://amzn.eu/d/c29n2Wa) pour pouvoir remonter l'écran, celui d'origine étant difficile à enlever sans le déchirer, et c'est ce scotch qui maintient le bloc éléctronique attaché au panneau. Pour le reste rien de très compliqué. Un fer à souder, un tournevis, et quelques dizaines de minutes suffisent à affectuer la réparation.
+Prévoir aussi du [ruban adhésif thermique](https://amzn.eu/d/c29n2Wa) pour pouvoir remonter l'écran, celui d'origine étant difficile à enlever sans le déchirer, et c'est ce scotch qui maintient le bloc éléctronique attaché au panneau. Pour le reste rien de très compliqué. Un fer à souder, un tournevis, et quelques dizaines de minutes suffisent à effectuer la réparation.
