@@ -6,12 +6,14 @@ tags: [Reparation]
 
 Cet écran 25 pouces IPS acheté 320€ en décembre 2015 est subitement tombé en panne cet été, après 10 ans de bons et loyaux services.
 
+![AOC Q2577PWQ](/images/aoc-new.jpg "AOC Q2577PWQ")
+
 Symptômes :
 - Ecran noir, led d'alimentation allumée
 - Une image apparaissant parfois pendant une fraction de secondes
 - Impossible d'accéder au menu de l'écran
 
-Après démontage et inspection visuelle, une cause probable était visible sur la carte d'alimeintation :
+Après démontage et inspection visuelle, une cause probable était visible sur la carte d'alimentation :
 
 ![AOC Q2577PWQ](/images/aoc-fail.png "AOC Q2577PWQ")
 
