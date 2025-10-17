@@ -13,7 +13,7 @@ Pour passer dans ce mode, on va devoir flasher l'OS de la borne.
 ## Prérequis
 
 - Pouvoir alimenter la borne AP-215, soit via un connexion POE si votre switch le supporte, soit via un bloc d'alimentation dédié (12V / 1,5A).
-- Un câble de console USB -> RJ45 (RS232), ou USB -> DB9 -> RJ45
+- Un câble de console [USB -> RJ45 (RS232)](https://www.amazon.fr/dp/B0CXMRRNP8), ou [USB -> DB9 -> RJ45](https://www.amazon.fr/Cisco-C%C3%A2ble-Console-S%C3%A9rie-P%C3%A9riph%C3%A9rique/dp/B06Y51HSC5)
 - Récupérer la dernière version d'Aruba Instant AOS compatible avec la borne ([8.6.0.25](https://networkingsupport.hpe.com/downloads/software/RmlsZTpmNDQwOThmYS00ZjY1LTExZWYtOTdlNC00MzQ0NTRhNTcxNDQ%3D)). Nécessite un compte support.
 
 ## Mise en place d'un serveur TFTP
