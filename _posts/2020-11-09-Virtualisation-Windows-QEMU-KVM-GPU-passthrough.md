@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installer une VM Windows avec un GPU dédié sous QEMU/KVM
-tags: [Linux, Windows, Virtualisation]
+tags: [Linux, Windows, Virtualisation, Jeu vidéo]
 ---
 
 ## Le projet ##
